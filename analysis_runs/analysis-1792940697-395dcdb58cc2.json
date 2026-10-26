@@ -1,0 +1,669 @@
+{
+  "config": {
+    "protein_id": "177",
+    "engine": "fusion",
+    "temperature": 40.0,
+    "ph": 8.0,
+    "duration": 48.0,
+    "temperature_span": 0.0,
+    "ph_span": 0.0,
+    "duration_span": 0.0
+  },
+  "selected_protein": {
+    "protein_id": "177",
+    "protein_name": "Sub1",
+    "center_prediction_um": 511.5186218188944,
+    "robust_score_um": 511.5186218188944,
+    "mean_prediction_um": 511.5186218188944,
+    "min_prediction_um": 511.5186218188944,
+    "max_prediction_um": 511.5186218188944,
+    "scenario_std_um": 0.0,
+    "training_observations": 12,
+    "structure_used": true
+  },
+  "ranking": [
+    {
+      "protein_id": "44",
+      "protein_name": "HiC",
+      "center_prediction_um": 534.8984426562073,
+      "robust_score_um": 534.8984426562073,
+      "mean_prediction_um": 534.8984426562073,
+      "min_prediction_um": 534.8984426562073,
+      "max_prediction_um": 534.8984426562073,
+      "scenario_std_um": 0.0,
+      "training_observations": 69,
+      "structure_used": true
+    },
+    {
+      "protein_id": "177",
+      "protein_name": "Sub1",
+      "center_prediction_um": 511.5186218188944,
+      "robust_score_um": 511.5186218188944,
+      "mean_prediction_um": 511.5186218188944,
+      "min_prediction_um": 511.5186218188944,
+      "max_prediction_um": 511.5186218188944,
+      "scenario_std_um": 0.0,
+      "training_observations": 12,
+      "structure_used": true
+    },
+    {
+      "protein_id": "225",
+      "protein_name": "HG-4",
+      "center_prediction_um": 274.6380399200766,
+      "robust_score_um": 274.6380399200766,
+      "mean_prediction_um": 274.6380399200766,
+      "min_prediction_um": 274.6380399200766,
+      "max_prediction_um": 274.6380399200766,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": true
+    },
+    {
+      "protein_id": "41",
+      "protein_name": "PET46",
+      "center_prediction_um": 219.2432878156533,
+      "robust_score_um": 219.2432878156533,
+      "mean_prediction_um": 219.2432878156533,
+      "min_prediction_um": 219.2432878156533,
+      "max_prediction_um": 219.2432878156533,
+      "scenario_std_um": 0.0,
+      "training_observations": 2,
+      "structure_used": true
+    },
+    {
+      "protein_id": "223",
+      "protein_name": "HG-2",
+      "center_prediction_um": 211.35547353019405,
+      "robust_score_um": 211.35547353019405,
+      "mean_prediction_um": 211.35547353019405,
+      "min_prediction_um": 211.35547353019405,
+      "max_prediction_um": 211.35547353019405,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": true
+    },
+    {
+      "protein_id": "149",
+      "protein_name": "606",
+      "center_prediction_um": 154.71972144028572,
+      "robust_score_um": 154.71972144028572,
+      "mean_prediction_um": 154.71972144028572,
+      "min_prediction_um": 154.71972144028572,
+      "max_prediction_um": 154.71972144028572,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "496",
+      "protein_name": "PET94",
+      "center_prediction_um": 148.4720504500597,
+      "robust_score_um": 148.4720504500597,
+      "mean_prediction_um": 148.4720504500597,
+      "min_prediction_um": 148.4720504500597,
+      "max_prediction_um": 148.4720504500597,
+      "scenario_std_um": 0.0,
+      "training_observations": 2,
+      "structure_used": false
+    },
+    {
+      "protein_id": "495",
+      "protein_name": "PET93",
+      "center_prediction_um": 145.97174145857383,
+      "robust_score_um": 145.97174145857383,
+      "mean_prediction_um": 145.97174145857383,
+      "min_prediction_um": 145.97174145857383,
+      "max_prediction_um": 145.97174145857383,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "11",
+      "protein_name": "Mors1",
+      "center_prediction_um": 143.84515709338365,
+      "robust_score_um": 143.84515709338365,
+      "mean_prediction_um": 143.84515709338365,
+      "min_prediction_um": 143.84515709338365,
+      "max_prediction_um": 143.84515709338365,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": true
+    },
+    {
+      "protein_id": "37",
+      "protein_name": "PHL-7",
+      "center_prediction_um": 138.59939112223026,
+      "robust_score_um": 138.59939112223026,
+      "mean_prediction_um": 138.59939112223026,
+      "min_prediction_um": 138.59939112223026,
+      "max_prediction_um": 138.59939112223026,
+      "scenario_std_um": 0.0,
+      "training_observations": 8,
+      "structure_used": false
+    },
+    {
+      "protein_id": "226",
+      "protein_name": "HG-5",
+      "center_prediction_um": 136.02770863771784,
+      "robust_score_um": 136.02770863771784,
+      "mean_prediction_um": 136.02770863771784,
+      "min_prediction_um": 136.02770863771784,
+      "max_prediction_um": 136.02770863771784,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "240",
+      "protein_name": "Dkca1",
+      "center_prediction_um": 133.53659304161818,
+      "robust_score_um": 133.53659304161818,
+      "mean_prediction_um": 133.53659304161818,
+      "min_prediction_um": 133.53659304161818,
+      "max_prediction_um": 133.53659304161818,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "25",
+      "protein_name": "TfCut2",
+      "center_prediction_um": 132.09539841284345,
+      "robust_score_um": 132.09539841284345,
+      "mean_prediction_um": 132.09539841284345,
+      "min_prediction_um": 132.09539841284345,
+      "max_prediction_um": 132.09539841284345,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "185",
+      "protein_name": "SM14est",
+      "center_prediction_um": 129.2907078795147,
+      "robust_score_um": 129.2907078795147,
+      "mean_prediction_um": 129.2907078795147,
+      "min_prediction_um": 129.2907078795147,
+      "max_prediction_um": 129.2907078795147,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": true
+    },
+    {
+      "protein_id": "224",
+      "protein_name": "HG-3",
+      "center_prediction_um": 126.41318536249003,
+      "robust_score_um": 126.41318536249003,
+      "mean_prediction_um": 126.41318536249003,
+      "min_prediction_um": 126.41318536249003,
+      "max_prediction_um": 126.41318536249003,
+      "scenario_std_um": 0.0,
+      "training_observations": 1,
+      "structure_used": false
+    },
+    {
+      "protein_id": "13",
+      "protein_name": "MG8",
+      "center_prediction_um": 123.79823230095789,
+      "robust_score_um": 123.79823230095789,
+      "mean_prediction_um": 123.79823230095789,
+      "min_prediction_um": 123.79823230095789,
+      "max_prediction_um": 123.79823230095789,
+      "scenario_std_um": 0.0,
+      "training_observations": 12,
+      "structure_used": false
+    },
+    {
+      "protein_id": "148",
+      "protein_name": "CtPl",
+      "center_prediction_um": 111.89056002294154,
+      "robust_score_um": 111.89056002294154,
+      "mean_prediction_um": 111.89056002294154,
+      "min_prediction_um": 111.89056002294154,
+      "max_prediction_um": 111.89056002294154,
+      "scenario_std_um": 0.0,
+      "training_observations": 2,
+      "structure_used": false
+    },
+    {
+      "protein_id": "15",
+      "protein_name": "RgPETase",
+      "center_prediction_um": 106.30035146286427,
+      "robust_score_um": 106.30035146286427,
+      "mean_prediction_um": 106.30035146286427,
+      "min_prediction_um": 106.30035146286427,
+      "max_prediction_um": 106.30035146286427,
+      "scenario_std_um": 0.0,
+      "training_observations": 0,
+      "structure_used": true
+    },
+    {
+      "protein_id": "4",
+      "protein_name": "PET12",
+      "center_prediction_um": 103.68190275178142,
+      "robust_score_um": 103.68190275178142,
+      "mean_prediction_um": 103.68190275178142,
+      "min_prediction_um": 103.68190275178142,
+      "max_prediction_um": 103.68190275178142,
+      "scenario_std_um": 0.0,
+      "training_observations": 2,
+      "structure_used": true
+    },
+    {
+      "protein_id": "483",
+      "protein_name": "DIEGO",
+      "center_prediction_um": 100.18249662423042,
+      "robust_score_um": 100.18249662423042,
+      "mean_prediction_um": 100.18249662423042,
+      "min_prediction_um": 100.18249662423042,
+      "max_prediction_um": 100.18249662423042,
+      "scenario_std_um": 0.0,
+      "training_observations": 12,
+      "structure_used": false
+    },
+    {
+      "protein_id": "17",
+      "protein_name": "BhrPETase",
+      "center_prediction_um": 99.1290731878114,
+      "robust_score_um": 99.1290731878114,
+      "mean_prediction_um": 99.1290731878114,
+      "min_prediction_um": 99.1290731878114,
+      "max_prediction_um": 99.1290731878114,
+      "scenario_std_um": 0.0,
+      "training_observations": 5,
+      "structure_used": true
+    },
+    {
+      "protein_id": "481",
+      "protein_name": "Sis",
+      "center_prediction_um": 97.57032986516363,
+      "robust_score_um": 97.57032986516363,
+      "mean_prediction_um": 97.57032986516363,
+      "min_prediction_um": 97.57032986516363,
+      "max_prediction_um": 97.57032986516363,
+      "scenario_std_um": 0.0,
+      "training_observations": 12,
+      "structure_used": false
+    },
+    {
+      "protein_id": "1",
+      "protein_name": "IsPETase",
+      "center_prediction_um": 93.13590931821594,
+      "robust_score_um": 93.13590931821594,
+      "mean_prediction_um": 93.13590931821594,
+      "min_prediction_um": 93.13590931821594,
+      "max_prediction_um": 93.13590931821594,
+      "scenario_std_um": 0.0,
+      "training_observations": 10,
+      "structure_used": true
+    },
+    {
+      "protein_id": "195",
+      "protein_name": "BurPL",
+      "center_prediction_um": 92.00377039855118,
+      "robust_score_um": 92.00377039855118,
+      "mean_prediction_um": 92.00377039855118,
+      "min_prediction_um": 92.00377039855118,
+      "max_prediction_um": 92.00377039855118,
+      "scenario_std_um": 0.0,
+      "training_observations": 8,
+      "structure_used": true
+    },
+    {
+      "protein_id": "42",
+      "protein_name": "CalB",
+      "center_prediction_um": 41.98665004211233,
+      "robust_score_um": 41.98665004211233,
+      "mean_prediction_um": 41.98665004211233,
+      "min_prediction_um": 41.98665004211233,
+      "max_prediction_um": 41.98665004211233,
+      "scenario_std_um": 0.0,
+      "training_observations": 15,
+      "structure_used": true
+    }
+  ],
+  "surface": [
+    {
+      "temperature": 40.0,
+      "ph": 8.0,
+      "predicted_tpa_um": 511.5186218188944,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.1943872400895339
+    }
+  ],
+  "sweeps": {
+    "temperature": [
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      }
+    ],
+    "ph": [
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      }
+    ],
+    "duration": [
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 511.5186218188944,
+        "outside_training_range": false
+      }
+    ]
+  },
+  "observed_evidence": [
+    {
+      "temperature": 37.0,
+      "ph": 7.5,
+      "duration": 240.0,
+      "measured_tpa_um": 266.05670258231504,
+      "used_in_training": true
+    },
+    {
+      "temperature": 37.0,
+      "ph": 7.5,
+      "duration": 240.0,
+      "measured_tpa_um": 699.4522362005658,
+      "used_in_training": true
+    },
+    {
+      "temperature": 37.0,
+      "ph": 7.5,
+      "duration": 360.0,
+      "measured_tpa_um": 394.2695479443809,
+      "used_in_training": true
+    },
+    {
+      "temperature": 37.0,
+      "ph": 7.5,
+      "duration": 360.0,
+      "measured_tpa_um": 970.926382953109,
+      "used_in_training": true
+    },
+    {
+      "temperature": 37.0,
+      "ph": 7.5,
+      "duration": 120.0,
+      "measured_tpa_um": 350.32805634141937,
+      "used_in_training": true
+    },
+    {
+      "temperature": 37.0,
+      "ph": 7.5,
+      "duration": 240.0,
+      "measured_tpa_um": 671.1611388671522,
+      "used_in_training": true
+    },
+    {
+      "temperature": 37.0,
+      "ph": 7.5,
+      "duration": 360.0,
+      "measured_tpa_um": 936.6159032083309,
+      "used_in_training": true
+    },
+    {
+      "temperature": 37.0,
+      "ph": 7.5,
+      "duration": 480.0,
+      "measured_tpa_um": 1248.4199121170168,
+      "used_in_training": true
+    },
+    {
+      "temperature": 50.0,
+      "ph": 7.5,
+      "duration": 120.0,
+      "measured_tpa_um": 326.85246493709747,
+      "used_in_training": true
+    },
+    {
+      "temperature": 50.0,
+      "ph": 7.5,
+      "duration": 240.0,
+      "measured_tpa_um": 517.6668873773551,
+      "used_in_training": true
+    },
+    {
+      "temperature": 50.0,
+      "ph": 7.5,
+      "duration": 360.0,
+      "measured_tpa_um": 657.3165593210136,
+      "used_in_training": true
+    },
+    {
+      "temperature": 50.0,
+      "ph": 7.5,
+      "duration": 480.0,
+      "measured_tpa_um": 764.4615662433034,
+      "used_in_training": true
+    }
+  ],
+  "best_grid_point": {
+    "temperature": 40.0,
+    "ph": 8.0,
+    "predicted_tpa_um": 511.5186218188944,
+    "outside_training_range": false,
+    "nearest_training_distance": 0.1943872400895339
+  },
+  "scenario_count": 1,
+  "outside_training_range_fraction": 0.0,
+  "nearest_training_distance_max": 0.1943872400895339,
+  "training_condition_ranges": {
+    "temperature": [
+      30.0,
+      80.0
+    ],
+    "ph": [
+      7.0,
+      9.0
+    ],
+    "duration": [
+      1.0,
+      672.0
+    ]
+  },
+  "model": {
+    "mode": "multimodal",
+    "kind": "ridge",
+    "alpha": 1000,
+    "seed": 42
+  },
+  "model_sha256": "66346f85527f3642fde9aca1519e4335404efc501ae4cb490f38b8d299a72e28",
+  "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
+  "score_definition": "10th percentile of predicted TPA over the discrete condition grid; not a biological measurement or calibrated lower confidence bound.",
+  "limitations": [
+    "Environmental sweeps are model sensitivity, not causal effects.",
+    "Highest grid score is a hypothesis, not a verified optimum.",
+    "GFP dataset has no condition labels; these PET effects are not applied to GFP.",
+    "No reliable mutation-effect estimates are inferred from catalog-protein ranking."
+  ],
+  "id": "analysis-1792940697-395dcdb58cc2",
+  "created": 1792940697.150155,
+  "status": "completed",
+  "domain": "PET environment",
+  "unit": "\u00b5M TPA",
+  "artifact_url": "/api/analysis/runs/analysis-1792940697-395dcdb58cc2"
+}

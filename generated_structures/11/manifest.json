@@ -1,0 +1,38 @@
+{
+  "protein_id": "11",
+  "protein_name": "Mors1",
+  "residues": 319,
+  "sequence_sha256": "548618f6b5a64b1bff32151bff7baafb2af24feb9321da1e82235e2e177e5ddd",
+  "source_pdb_sha256": "3f23e0cf14169d055504072a999f4ef754617c5bb9359eb0a9cc8d0dafc12a3d",
+  "source_kind": "Sequence-verified AlphaFold predicted structure",
+  "representation": "20 \u00c5 capped C-alpha distance map; 8 \u00c5 C-alpha proximity map; three PCA projections",
+  "generator_sha256": "4f2f05a881a53801cbe7b8edccebf40b1f926cbdbdc2f2f0808288d1980c5769",
+  "images": [
+    {
+      "name": "distance.png",
+      "url": "/api/analysis/images/11/distance.png",
+      "sha256": "c35666b40d5f4d68ebf2b385837f66a32ffed4b0c2dfe031a3c233e7da9e4302"
+    },
+    {
+      "name": "contacts.png",
+      "url": "/api/analysis/images/11/contacts.png",
+      "sha256": "d9c12f55c257d04a3cefb91dceec415fff2d5771e1b882554d5576f0a12cf686"
+    },
+    {
+      "name": "front.svg",
+      "url": "/api/analysis/images/11/front.svg",
+      "sha256": "645526f510ec43edfe8767845d0e227bcdf6901450074c72a62ab7a0038b0d72"
+    },
+    {
+      "name": "side.svg",
+      "url": "/api/analysis/images/11/side.svg",
+      "sha256": "3e8f58f0978d826979dca3b2dc6f27b9fa0e1e412a8ec7e5e30673c7523c84bc"
+    },
+    {
+      "name": "top.svg",
+      "url": "/api/analysis/images/11/top.svg",
+      "sha256": "765ae3405250740de071ed7898f8e4f8099a62f632837d08f18e33cdb3df42ba"
+    }
+  ],
+  "note": "Coordinate-derived synthetic views, not de novo folding. C-alpha proximity is not an atom-level contact prediction. Structure images are not experimental activity labels."
+}

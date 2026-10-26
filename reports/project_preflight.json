@@ -1,0 +1,107 @@
+{
+  "ready": true,
+  "root": "D:\\Enzyme_ML_new",
+  "pet_root": "D:\\Final_Year_Project\\EnzAIme_ML",
+  "url": "http://127.0.0.1:8765/",
+  "checks": [
+    {
+      "name": "Helix interpreter",
+      "ok": true,
+      "path": "D:\\Enzyme_ML_new\\.venv\\Scripts\\python.exe"
+    },
+    {
+      "name": "PET interpreter",
+      "ok": true,
+      "path": "D:\\Final_Year_Project\\EnzAIme_ML\\.venv-1\\Scripts\\python.exe"
+    },
+    {
+      "name": "PET application",
+      "ok": true,
+      "path": "D:\\Final_Year_Project\\EnzAIme_ML\\backend\\app\\workspace_app.py"
+    },
+    {
+      "name": "Built PET frontend",
+      "ok": true,
+      "path": "D:\\Enzyme_ML_new\\frontend\\dist\\index.html"
+    },
+    {
+      "name": "PET checkpoint",
+      "ok": true,
+      "path": "D:\\Final_Year_Project\\EnzAIme_ML\\models\\neural\\weights.pt"
+    },
+    {
+      "name": "PET metadata",
+      "ok": true,
+      "path": "D:\\Final_Year_Project\\EnzAIme_ML\\models\\neural\\manifest.json"
+    },
+    {
+      "name": "PET measurements",
+      "ok": true,
+      "path": "D:\\Final_Year_Project\\EnzAIme_ML\\data\\processed\\tpa_pet_ml_confirmed.csv"
+    },
+    {
+      "name": "PET sequence features",
+      "ok": true,
+      "path": "D:\\Final_Year_Project\\EnzAIme_ML\\data\\neural_features\\index.json"
+    },
+    {
+      "name": "Structure catalog",
+      "ok": true,
+      "path": "D:\\Final_Year_Project\\EnzAIme_ML\\data\\structure_images\\manifest.json"
+    },
+    {
+      "name": "Condition analysis model",
+      "ok": true,
+      "path": "D:\\Enzyme_ML_new\\models\\condition_analysis\\model.pkl"
+    },
+    {
+      "name": "Training study pointer",
+      "ok": true,
+      "path": "D:\\Enzyme_ML_new\\models\\assay_v2\\latest.json"
+    },
+    {
+      "name": "Shared interface",
+      "ok": true,
+      "path": "D:\\Enzyme_ML_new\\lab\\static\\workspace.html"
+    },
+    {
+      "name": "Helix package numpy",
+      "ok": true
+    },
+    {
+      "name": "Helix package scipy",
+      "ok": true
+    },
+    {
+      "name": "Helix package sklearn",
+      "ok": true
+    },
+    {
+      "name": "Helix package pandas",
+      "ok": true
+    },
+    {
+      "name": "Helix package flask",
+      "ok": true
+    },
+    {
+      "name": "Helix package torch",
+      "ok": true
+    },
+    {
+      "name": "Helix package transformers",
+      "ok": true
+    },
+    {
+      "name": "PET Python packages",
+      "ok": true,
+      "packages": {
+        "fastapi": true,
+        "uvicorn": true,
+        "torch": true,
+        "numpy": true
+      }
+    }
+  ],
+  "note": "Linked installation: both project folders are required. This checks software readiness, not scientific accuracy."
+}

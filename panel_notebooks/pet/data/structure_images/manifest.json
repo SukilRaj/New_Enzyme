@@ -1,0 +1,213 @@
+{
+  "matched_proteins": 13,
+  "excluded_proteins": 12,
+  "representation": "C-alpha distance map, 20 Angstrom cutoff, full exact sequence only",
+  "source": "https://alphafold.ebi.ac.uk/",
+  "matched": [
+    {
+      "protein_id": "1",
+      "accession": "A0A0K8P6T7",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A0K8P6T7-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/1_distance.png",
+      "residues": 290
+    },
+    {
+      "protein_id": "4",
+      "accession": "A0A0G3BI90",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A0G3BI90-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/4_distance.png",
+      "residues": 298
+    },
+    {
+      "protein_id": "11",
+      "accession": "P19833",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-P19833-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/11_distance.png",
+      "residues": 319
+    },
+    {
+      "protein_id": "15",
+      "accession": "A0A1W6L588",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A1W6L588-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/15_distance.png",
+      "residues": 292
+    },
+    {
+      "protein_id": "17",
+      "accession": "A0A2H5Z9R5",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A2H5Z9R5-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/17_distance.png",
+      "residues": 293
+    },
+    {
+      "protein_id": "41",
+      "accession": "A0A497NK85",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A497NK85-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/41_distance.png",
+      "residues": 262
+    },
+    {
+      "protein_id": "42",
+      "accession": "P41365",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-P41365-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/42_distance.png",
+      "residues": 342
+    },
+    {
+      "protein_id": "44",
+      "accession": "A0A075B5G4",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A075B5G4-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/44_distance.png",
+      "residues": 194
+    },
+    {
+      "protein_id": "177",
+      "accession": "A0A5P3LVN0",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A5P3LVN0-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/177_distance.png",
+      "residues": 186
+    },
+    {
+      "protein_id": "185",
+      "accession": "A0A679PDB4",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A679PDB4-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/185_distance.png",
+      "residues": 284
+    },
+    {
+      "protein_id": "195",
+      "accession": "A0A1F4JXW8",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A1F4JXW8-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/195_distance.png",
+      "residues": 426
+    },
+    {
+      "protein_id": "223",
+      "accession": "A0A413UCA3",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A413UCA3-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/223_distance.png",
+      "residues": 259
+    },
+    {
+      "protein_id": "225",
+      "accession": "A0A150JTB6",
+      "structure_url": "https://alphafold.ebi.ac.uk/files/AF-A0A150JTB6-F1-model_v6.pdb",
+      "structure_kind": "AlphaFold predicted",
+      "sequence_identity": 1.0,
+      "coverage": 1.0,
+      "view": "views/225_distance.png",
+      "residues": 254
+    }
+  ],
+  "excluded": [
+    {
+      "protein_id": "13",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "25",
+      "reason": [
+        "Q6A0I4: no full exact-sequence structure"
+      ]
+    },
+    {
+      "protein_id": "37",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "148",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "149",
+      "reason": [
+        "A0A1T4KK94: no full exact-sequence structure"
+      ]
+    },
+    {
+      "protein_id": "224",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "226",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "240",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "481",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "483",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "495",
+      "reason": [
+        "No UniProt accession"
+      ]
+    },
+    {
+      "protein_id": "496",
+      "reason": [
+        "No UniProt accession"
+      ]
+    }
+  ],
+  "limitations": "Predicted structures; no experimental structural validation. Benefit of images must be tested with held-out ablations."
+}

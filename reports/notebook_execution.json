@@ -1,0 +1,26 @@
+{
+  "notebooks": {
+    "01_PET_Environment_Training_Evaluation.ipynb": {
+      "success": true,
+      "seconds": 56.13,
+      "code_cells": 19,
+      "executed_code_cells": 19,
+      "embedded_plots": 9,
+      "errors": []
+    },
+    "02_GFP_Benchmark_and_Directed_Evolution.ipynb": {
+      "success": false,
+      "seconds": 65.33,
+      "code_cells": 12,
+      "executed_code_cells": 10,
+      "embedded_plots": 3,
+      "errors": [
+        {
+          "name": "KeyError",
+          "message": "'decoders'"
+        }
+      ]
+    }
+  },
+  "checked_at": "2026-10-26T04:17:22.323987+00:00"
+}

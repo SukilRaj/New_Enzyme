@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-25T20:24:54.711Z",
+  "checks": [
+    "FASTA export contains exactly the three validated substitutions",
+    "One-click reference inspection maps residue S121",
+    "Both additional substitution buttons map correct reference residues",
+    "Reference PDB download is identical to the cached catalog coordinates",
+    "Variant and reference view survive navigation between discovery and structure",
+    "FASTA in PDB field gives actionable guidance before coordinate inspection",
+    "Downloaded FASTA round-trips through import and restores all substitutions",
+    "Structure canvas supports rotation, residue focus and reset",
+    "Renaming FASTA to PDB cannot bypass file-format validation",
+    "Inner navigation updates the shared title and URL"
+  ],
+  "page_errors": [],
+  "fasta_filename": "protein_1_S121E_D186H_R280A.fasta",
+  "reference_pdb_filename": "protein_1_reference_A0A0K8P6T7.pdb",
+  "reference_pdb_sha256": "e1cb5aefb9a0ab435e02c3676820cbee4f10c0008247d8ff0ce81fa45dd72815",
+  "mutant_structure_predicted": false
+}

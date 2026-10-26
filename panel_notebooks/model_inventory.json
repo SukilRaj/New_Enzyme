@@ -1,0 +1,37 @@
+[
+  {
+    "model": "Original PET neural",
+    "bundled_path": "pet/models/neural/weights.pt",
+    "original_path": "D:/Final_Year_Project/EnzAIme_ML/models/neural/weights.pt",
+    "evaluation": "Historical 18 rows / 5 sequence groups",
+    "bytes": 326777
+  },
+  {
+    "model": "Condition/image surrogate",
+    "bundled_path": "models/condition_analysis/model.pkl",
+    "original_path": "D:/Enzyme_ML_new/models/condition_analysis/model.pkl",
+    "evaluation": "Historical holdout; grouped results in separate CSV",
+    "bytes": 38652
+  },
+  {
+    "model": "Assay full-data refit",
+    "bundled_path": "models/assay_v2/train-20261024-160717/model.pkl",
+    "original_path": "D:/Enzyme_ML_new/models/assay_v2/train-20261024-160717/model.pkl",
+    "evaluation": "Use saved out-of-fold CSVs; refit has no independent holdout",
+    "bytes": 2402100
+  },
+  {
+    "model": "GFP Ridge",
+    "bundled_path": "runs/20261023-162906-a42ad8/baseline.pkl",
+    "original_path": "D:/Enzyme_ML_new/runs/20261023-162906-a42ad8/baseline.pkl",
+    "evaluation": "Original 400-sequence holdout",
+    "bytes": 28572
+  },
+  {
+    "model": "GFP ESM head",
+    "bundled_path": "runs/20261024-092703-afed29/decoder.pt",
+    "original_path": "D:/Enzyme_ML_new/runs/20261024-092703-afed29/decoder.pt",
+    "evaluation": "Original 20-sequence execution demonstration",
+    "bytes": 300792
+  }
+]

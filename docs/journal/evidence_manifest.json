@@ -1,0 +1,755 @@
+{
+  "created_at": "2026-10-25T20:51:40.159749+00:00",
+  "schema_version": 1,
+  "purpose": "Local manuscript evidence and implementation fingerprints. Checkpoints are hashed, not included in the journal ZIP.",
+  "roots": {
+    "helix": "D:\\Enzyme_ML_new",
+    "pet": "D:\\Final_Year_Project\\EnzAIme_ML"
+  },
+  "files": [
+    {
+      "project": "helix",
+      "path": ".vscode/tasks.json",
+      "bytes": 1771,
+      "sha256": "56f223c63c12b7383693777c07a4cb55811bddbe01bc133f38b800359b2bc594"
+    },
+    {
+      "project": "helix",
+      "path": "Check-Research.cmd",
+      "bytes": 198,
+      "sha256": "4e24d424c4fceb74cf38cfd0c3c131e1a71011a463d78f35e5e6b8cb579c6d80"
+    },
+    {
+      "project": "helix",
+      "path": "docs/ANALYSIS_METHODS_AND_RESULTS.md",
+      "bytes": 18297,
+      "sha256": "86a5bb8f83d692bfbca22e874eb9f67a55c703541feab9905b2da9f1e07003dc"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/BENCHMARK_COMPARISON_AND_GAPS.md",
+      "bytes": 8271,
+      "sha256": "79022a3e46842fcfd77ad5b513a14d1ec382fd1112cc9cb258c0ca1fe4be2b44"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/ENZAIME_HELIX_PROJECT_SUMMARY.pdf",
+      "bytes": 790015,
+      "sha256": "e20af3caefbed84ad8931a1b1ada2fc1c05fbfecc0e71299dfa1113e57fba44f"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/figures/architecture.png",
+      "bytes": 174104,
+      "sha256": "52154e680a7883fbd4bd5e6f131ff8b27ecdcd1c1eda9e40124a910069719205"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/figures/architecture.svg",
+      "bytes": 7333,
+      "sha256": "780b97119566798a0052c925d790f2dce691fe8484b532f928e67637292d2256"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/figures/grouped_results.png",
+      "bytes": 98634,
+      "sha256": "3dacd736cf407e2978f70e3b04425148ed07725e4c6998ab8b852c2e9e5f31ec"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/figures/grouped_results.svg",
+      "bytes": 17082,
+      "sha256": "d70e86911dbcfa4c28c0e14d87eb227aa1d28955f9f31f3f5ac8bccebe5dadbe"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/figures/prediction_diagnostics.png",
+      "bytes": 243272,
+      "sha256": "984ffc506602454459ab35e1edd933180a4e463f8f3d566bb54fc69cd069737a"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/figures/prediction_diagnostics.svg",
+      "bytes": 115100,
+      "sha256": "96bc819944d0b091c303f4972071901603beaf6b4fb7b2754e7cfa917e6dd38a"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/FIGURES_AND_METRICS.md",
+      "bytes": 749,
+      "sha256": "2092c47b8db3d3c9e7232b92f521507f26c9465a506687cde900c87db862ef12"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/helix_environment_snapshot.txt",
+      "bytes": 994,
+      "sha256": "a69379740eaa43909154c0d10b60bfa290a030b76050de54598399a1b15eb422"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/metric_tables.csv",
+      "bytes": 3522,
+      "sha256": "82ce510dbfb178ea7a7f5f7a2c6ede5c3f0bef8f58a6196e81ada3ba5d974908"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/PROJECT_AND_JOURNAL_SUMMARY.md",
+      "bytes": 35813,
+      "sha256": "aa78847faace54303c3eb4c9b1da0ed277085182df3e8094a43a84b95dca1aba"
+    },
+    {
+      "project": "helix",
+      "path": "docs/journal/README.md",
+      "bytes": 2819,
+      "sha256": "9c752a3a3f1a65375169da38e73c547ec8e65bc4b71dcbc4c2829714b44d9c32"
+    },
+    {
+      "project": "helix",
+      "path": "docs/PROJECT_COMPARISON_AND_INTEGRATION.md",
+      "bytes": 16910,
+      "sha256": "2849a68b054b8c3680234f2c6e0c6f4922b8e8f69a241339628c18357f28796d"
+    },
+    {
+      "project": "helix",
+      "path": "docs/RUN_IN_VS_CODE.md",
+      "bytes": 7859,
+      "sha256": "4eb8cff1b45d7cd73e46c6b6db93c0f9cf45de39d932fb9458d150d2f4947172"
+    },
+    {
+      "project": "helix",
+      "path": "docs/SEQUENCE_AND_STRUCTURE_GUIDE.md",
+      "bytes": 3833,
+      "sha256": "4e9f831d728137d5e549a7776f577d4d0bfc8310d5d439ff8585d1b932385eb4"
+    },
+    {
+      "project": "helix",
+      "path": "EnzAIme-Helix.code-workspace",
+      "bytes": 138,
+      "sha256": "37ade6dcd40898b1a44317ec9773849a9cc9963990f51633534b6b6b13b4fd33"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/dist/assets/index-Bgac12MJ.js",
+      "bytes": 262105,
+      "sha256": "8837e9cd4be6f479956f82d01946c35ddbfde2acea7a0e7f135140f89e1d70bb"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/dist/assets/index-DfJjTWhw.css",
+      "bytes": 26936,
+      "sha256": "814178d827aabea4496c9f67b3bb393556f5e86e91c2c7b60941ae731336044a"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/dist/index.html",
+      "bytes": 476,
+      "sha256": "f1adf408aeb68ee0e76322e4c3bcb979f6f3ba568901cf4863b0ef2da866656e"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/package-lock.json",
+      "bytes": 84631,
+      "sha256": "f090cf689b7c296e19ca3c7c31ffaac810920d8bf89a487c76d90ad7f68849ad"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/package.json",
+      "bytes": 606,
+      "sha256": "959c6d3ed000fb3a221fcab3a63de6fa8026f4816bb4a771132e6d12fcd17482"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/App.css",
+      "bytes": 17356,
+      "sha256": "1c99e32c38a096b453ffeaa5b4680dacf318cb7fae696a5bcfbe6d75a81e7259"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/App.jsx",
+      "bytes": 41,
+      "sha256": "cd5b0f234099f2ea9437b08972aa6edeee2ab15cbf42c67b4b57c5d422cc33e2"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/index.css",
+      "bytes": 59,
+      "sha256": "7bab319cc142e970c1448152ff08e7de3e2e4b53c4cab8c23b477b14b3629366"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/main.jsx",
+      "bytes": 229,
+      "sha256": "4b4b864dbe45253425d0c925337180ec07e204295179f80f59551216f466f618"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/MutationWorkspace.css",
+      "bytes": 2805,
+      "sha256": "87443846a7e2abda13cfbc999862cfde4ec86ae221498fa1645ccf67581e02bd"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/MutationWorkspace.jsx",
+      "bytes": 20145,
+      "sha256": "561c1ca076e1372aaae6502ce3b3d076b39c9e999d8ea6625b01e60d2fd23b49"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/NeuralWorkspace.jsx",
+      "bytes": 4982,
+      "sha256": "ecc108f39f28920ee555de5aab529ce755db711d76a10acd3646854d754e09c1"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/ResearchApp.css",
+      "bytes": 9159,
+      "sha256": "aaf29dbad2d385f6327a44f939f4eb658d2ed3ef9a7ffe212cf9e8d09bddb6dc"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/ResearchApp.jsx",
+      "bytes": 17387,
+      "sha256": "af57e91ded27f499b14ce318f7d22425e4d57a2cd3342809e08c8193695d6fc9"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/sequenceFiles.js",
+      "bytes": 1733,
+      "sha256": "cd3af297ea983a994cc88d777de08cacac6760c62553f81f3aab705425b06020"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/structureGeometry.js",
+      "bytes": 1103,
+      "sha256": "706cc04e33f72519635f7fcfb917e334fe652599f30a06d1b82aa03e8b4eeaf3"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/StructureViewer.css",
+      "bytes": 1690,
+      "sha256": "c8d67aae895695f55de82353dd7a43820c75ecd4e60fa62071dcf58434c2ef17"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/src/StructureViewer.jsx",
+      "bytes": 9005,
+      "sha256": "0fca25a052929642590afe57d910d27ae0372a984ca4b00d52fc6963da82ed59"
+    },
+    {
+      "project": "helix",
+      "path": "frontend/tests/sequenceFiles.test.js",
+      "bytes": 1551,
+      "sha256": "afd8c0f9dab00eadaf60ce47fbf7d5a69cfb5a7f27a53a5058f9e1f960f5e1c0"
+    },
+    {
+      "project": "helix",
+      "path": "lab/analysis_api.py",
+      "bytes": 11585,
+      "sha256": "9410e2c29b8d22b02196e05b734992484f1cc8f3d5986d622c2b05aa2c6a2b4a"
+    },
+    {
+      "project": "helix",
+      "path": "lab/assay_model.py",
+      "bytes": 8630,
+      "sha256": "11d4440562a9ca51aa93abb7ce5ab94bf7d4fe6563fb7431230bcf58a981d337"
+    },
+    {
+      "project": "helix",
+      "path": "lab/condition_model.py",
+      "bytes": 6849,
+      "sha256": "3061efd3aa3fa6400acdc8fd75ec15ed3f23e35cddbdf3e8c218bacb37b3eaf9"
+    },
+    {
+      "project": "helix",
+      "path": "lab/engine.py",
+      "bytes": 16309,
+      "sha256": "c2e35a67df492703bad678beb5b7562c294651f3f17148ee762e3945a8ac49fa"
+    },
+    {
+      "project": "helix",
+      "path": "lab/integration.py",
+      "bytes": 10268,
+      "sha256": "4f799cbcf77a7f03bfe574c3969cc25f083bc3bbbe67ecb909ec906d45b3f653"
+    },
+    {
+      "project": "helix",
+      "path": "lab/pet_extensions.py",
+      "bytes": 3054,
+      "sha256": "cf0ab0c286062fb0df2a458d9f8bd624cf9ee1030aaef857ab76020e4f3dc4ac"
+    },
+    {
+      "project": "helix",
+      "path": "lab/pet_worker.py",
+      "bytes": 1018,
+      "sha256": "aae96d61db1dac20b2816711e86c3205fbc8baacf92ea63b6d16a3c3b0e857bf"
+    },
+    {
+      "project": "helix",
+      "path": "lab/server.py",
+      "bytes": 5059,
+      "sha256": "a69f9199734b26121bf0b08e259777072ab46a6b548b959edd08043433963777"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/analysis.css",
+      "bytes": 4892,
+      "sha256": "29495801d52344d055707dc3d1b69543547c957ab58c41d60eae371a123e28c8"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/analysis.html",
+      "bytes": 11058,
+      "sha256": "5f4b866b8401993f5438e0427d486a2610ac8b0c6a28892e4ae1dbf68f8525e1"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/analysis.js",
+      "bytes": 13034,
+      "sha256": "216e5e37efa9c33341a618ffeb708cab681c1df7a27b6e0d4e543f87441adc45"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/app.js",
+      "bytes": 6477,
+      "sha256": "d4fb4b02baec810eb69954707cf3c5fa860acaec60c82cc1d31ae6cf1e7c99f8"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/embedded.css",
+      "bytes": 3009,
+      "sha256": "c364422d425ab1a9475897ffbdc12feabb27d124014bf865cca978d5e02793c0"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/embedded.js",
+      "bytes": 3380,
+      "sha256": "f1dd8f69ece02d10e0d581257f489b34b85f11392fe69c18bb02848e3b0f555a"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/index.html",
+      "bytes": 10227,
+      "sha256": "3b406d56608c793305b0f251aeb2ee44125eab85e396c2a0ab0300b21656ba47"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/research.css",
+      "bytes": 8199,
+      "sha256": "9ff78f83a92fd0787c6a5fbeb5df363e2d4e89c3ceed3ecb12023c970171da6c"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/research.html",
+      "bytes": 8050,
+      "sha256": "bb34da7770fd92cba311fbcdb99589685419cc8c70bc47f1b73d02769850a88f"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/research.js",
+      "bytes": 3735,
+      "sha256": "592005687e31169143405f62dc8b92cb41e503661e21cfa64f566e7a96e7f313"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/style.css",
+      "bytes": 7862,
+      "sha256": "54b00428a4e18b4e6c93b1c00a9d9016d7d349ba6f2ecd8d6178b786e6ff107c"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/training.css",
+      "bytes": 2145,
+      "sha256": "7115c76e6050298f67bd67b235916988b54ebe6989a5a972898c46031075efe0"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/training.html",
+      "bytes": 4619,
+      "sha256": "c383ff5c45c88dd0c92fdf166b1bef3575ccc3e3aa1a0bbf07da34b6a6eaee5b"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/training.js",
+      "bytes": 5705,
+      "sha256": "52ec5275390c10ffc351be9f6db0ec4b914b19d6a8d5cc909498a34910b20698"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/workspace.css",
+      "bytes": 5213,
+      "sha256": "062299c5b2eb1ff9be1a354bb468df0c00ae2831cfb99c4ef1f37ea03a9a1fba"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/workspace.html",
+      "bytes": 2720,
+      "sha256": "4fec3891939e7fcb6307740fdb5067a5758f9b7888a7b3e97ba89cec11fd4c3a"
+    },
+    {
+      "project": "helix",
+      "path": "lab/static/workspace.js",
+      "bytes": 5577,
+      "sha256": "81e2b807ac968ec50bc560a15d1b79cb808fbab6ed659e3e39586cfc2a484f92"
+    },
+    {
+      "project": "helix",
+      "path": "lab/structure_images.py",
+      "bytes": 6844,
+      "sha256": "4f2f05a881a53801cbe7b8edccebf40b1f926cbdbdc2f2f0808288d1980c5769"
+    },
+    {
+      "project": "helix",
+      "path": "lab/training_api.py",
+      "bytes": 3201,
+      "sha256": "f54266884a2cf522ae60a27d3390c4f1d0925581f596e789d055deceea578790"
+    },
+    {
+      "project": "helix",
+      "path": "lab/workspace.py",
+      "bytes": 786,
+      "sha256": "2b1da888190842505cdba97c4abf1f182f8fbfed0eb5aaf4bd1a44ffa2151105"
+    },
+    {
+      "project": "helix",
+      "path": "launch_research.py",
+      "bytes": 3616,
+      "sha256": "3e9495cf889d374c8353459b86a1d0c879ef3e026598780159f49efd122d3a1c"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/context_audit.json",
+      "bytes": 787,
+      "sha256": "7feef476e905d9df781848bc3e5d6df3bb2b9cc2f23c1f7ffa205a3acb407cd6"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/historical_predictions.csv",
+      "bytes": 1293,
+      "sha256": "96406b98e848c915cc1cd41c327291a73eac5d70c9e8672927d47e0faf7ffc2c"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/model.pkl",
+      "bytes": 2402100,
+      "sha256": "4c958636baa12545a2725e2b5471cd1380af4f018b1fe4907dae9acd4b8b859a"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/protocol.json",
+      "bytes": 37052,
+      "sha256": "4432aff67c96415fba1474914b27237c88a0eb3c00e4a092d0ae05c34c5e88cf"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/report.json",
+      "bytes": 9921,
+      "sha256": "4e4a0875f7d9db08f4aa83e12c1bee5330b10b536490497318a485b269b0e601"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/sequence_and_study_oof.csv",
+      "bytes": 34799,
+      "sha256": "053ea6ac812e107291e8d18da43dfc4530c68b7dc27401ea122b7c3d7599f1dd"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/sequence_oof.csv",
+      "bytes": 35265,
+      "sha256": "a396eea0d5bf2debf5e8c4f3cd8ff805e5e6e24d013b2be416c93adaeda541ed"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/splits.json",
+      "bytes": 124373,
+      "sha256": "1660fe25e0eb31c6c9217045473da4d3497f5752076c4ea313eddcbc9ebc2996"
+    },
+    {
+      "project": "helix",
+      "path": "models/assay_v2/train-20261024-160717/status.json",
+      "bytes": 8967,
+      "sha256": "09e36c346b373951d6201cda8dcbca1e4afa615f9048deaba3643f70ba8e87f5"
+    },
+    {
+      "project": "helix",
+      "path": "models/condition_analysis/cv_splits.json",
+      "bytes": 55251,
+      "sha256": "6eebc844695c35c66424c819449c915b16d2f94f9cdb09ba86edddf79cedfcde"
+    },
+    {
+      "project": "helix",
+      "path": "models/condition_analysis/grouped_oof.csv",
+      "bytes": 18325,
+      "sha256": "f70d4e03aaaad70f0b8067ae0b7c981a14d8ee62ae86ae42a5fcf6080363bcdc"
+    },
+    {
+      "project": "helix",
+      "path": "models/condition_analysis/heldout.csv",
+      "bytes": 2691,
+      "sha256": "6f46ef3c1085a64199eac18e2021eaf8a662e7f1ec35350dc3b53a9284983928"
+    },
+    {
+      "project": "helix",
+      "path": "models/condition_analysis/model.pkl",
+      "bytes": 38652,
+      "sha256": "66346f85527f3642fde9aca1519e4335404efc501ae4cb490f38b8d299a72e28"
+    },
+    {
+      "project": "helix",
+      "path": "models/condition_analysis/protocol.json",
+      "bytes": 7619,
+      "sha256": "92ce127be37dcc6c1be0b2e18fa233dc8d0201dc7419bbcc63fbf1bd62401c6d"
+    },
+    {
+      "project": "helix",
+      "path": "models/condition_analysis/report.json",
+      "bytes": 7238,
+      "sha256": "21dceacad212d071a68f4343d2790181cc734bb26c34d5a458391ab950fd050b"
+    },
+    {
+      "project": "helix",
+      "path": "README.md",
+      "bytes": 10917,
+      "sha256": "46de14396c362bea8a66c428b38322965a128b9d436d799d6bf7d0459f5710f4"
+    },
+    {
+      "project": "helix",
+      "path": "REPLICATION_STATUS.md",
+      "bytes": 2464,
+      "sha256": "1c4a68c0858a87808429189078cea815eb6f11bb4e4c30da1e0b7bae8626690b"
+    },
+    {
+      "project": "helix",
+      "path": "reports/analysis_verification.json",
+      "bytes": 718,
+      "sha256": "5da24094258305635f28272e8ebb1bf2247fd9e2b82534f93f009115e1501b42"
+    },
+    {
+      "project": "helix",
+      "path": "reports/fasta-import.png",
+      "bytes": 81310,
+      "sha256": "0d84bd391f0d8a1008955d31acd488bb8634b177ab3436a5e6de1c875afcbfd7"
+    },
+    {
+      "project": "helix",
+      "path": "reports/integration_verification.json",
+      "bytes": 898,
+      "sha256": "77332d90d43730d97b30afe246283d384a32add1811cdaae12c063455e307053"
+    },
+    {
+      "project": "helix",
+      "path": "reports/project_preflight.json",
+      "bytes": 2774,
+      "sha256": "79a124f78d6a53811be1815b02e52e0e8cbaf376886c07adefc8c26d2eff7300"
+    },
+    {
+      "project": "helix",
+      "path": "reports/reference-structure-inspection.png",
+      "bytes": 238277,
+      "sha256": "a6dda8578f87cd526051ad7343a41597afc1b875f85a757d8a837b3ebfcfb62c"
+    },
+    {
+      "project": "helix",
+      "path": "reports/sequence_workflow_verification.json",
+      "bytes": 1059,
+      "sha256": "da296141ceada567b4ba86b52d3ac9c8babd47343e2acba88254ae6fc6410692"
+    },
+    {
+      "project": "helix",
+      "path": "reports/unified-training.png",
+      "bytes": 104133,
+      "sha256": "003f49730902e528c6e5c4a8f162fc5091171dba6f23f932092e8523f7760742"
+    },
+    {
+      "project": "helix",
+      "path": "reports/workspace_verification.json",
+      "bytes": 977,
+      "sha256": "11e971042918345ee83f124d2cdaf6d628593a7fa2de422b4ce3281ac381b94c"
+    },
+    {
+      "project": "helix",
+      "path": "requirements-core.txt",
+      "bytes": 75,
+      "sha256": "825081cfac17f930ec1b526837bfb601d391c4ea17e69278284d9f4c13842b3e"
+    },
+    {
+      "project": "helix",
+      "path": "requirements-local.txt",
+      "bytes": 215,
+      "sha256": "1886b9f4731af1e7cb11180099c3b43cfde23cbddfa6f39886d0a1028055f6db"
+    },
+    {
+      "project": "helix",
+      "path": "requirements-report.txt",
+      "bytes": 77,
+      "sha256": "92e98ee1218267cff419caccb99139911b8da914b2284303bba8eecfb32c8787"
+    },
+    {
+      "project": "helix",
+      "path": "runs/20261023-162906-a42ad8/candidates.csv",
+      "bytes": 4842,
+      "sha256": "ccaaf6cc293ec9bec8bb775e6bf40e06d35bc7278f200d2549dbfa039703420b"
+    },
+    {
+      "project": "helix",
+      "path": "runs/20261023-162906-a42ad8/holdout.csv",
+      "bytes": 108616,
+      "sha256": "0897ac4d6f018ce98e4a50a22819ff4a9c8687bf70bf555ff409cf852fed2957"
+    },
+    {
+      "project": "helix",
+      "path": "runs/20261023-162906-a42ad8/manifest.json",
+      "bytes": 480,
+      "sha256": "1b68b9b2d3047351287f6f1fb28c8181790008097f92451cf1d5adc55d845ceb"
+    },
+    {
+      "project": "helix",
+      "path": "runs/20261023-162906-a42ad8/result.json",
+      "bytes": 34996,
+      "sha256": "11ebd52b414f1903161ee06099df1a57f73e5300e7548ae9ba21ec89c6191a56"
+    },
+    {
+      "project": "helix",
+      "path": "runs/20261023-162906-a42ad8/split.json",
+      "bytes": 482021,
+      "sha256": "b4364a1fc173864f991c8c10cb743b059bd4cba05ab23f3be2a3beedb89c1242"
+    },
+    {
+      "project": "helix",
+      "path": "runs/20261023-162906-a42ad8/status.json",
+      "bytes": 26897,
+      "sha256": "27ed3ea4eaded7127f5023115f435ebd3eec1530389f7213732b85603fccf626"
+    },
+    {
+      "project": "helix",
+      "path": "scripts/build_journal_evidence.py",
+      "bytes": 6672,
+      "sha256": "7f4578210a12df4546f00c8016190134b5d93de282296641c6a4c85a249d88fc"
+    },
+    {
+      "project": "helix",
+      "path": "scripts/build_journal_pdf.py",
+      "bytes": 7898,
+      "sha256": "388fac0b2ae10fa80bcf5c77b3d9b09a332ec6c457ffbccb057ebc57e231f4a5"
+    },
+    {
+      "project": "helix",
+      "path": "scripts/check_research.py",
+      "bytes": 4088,
+      "sha256": "8111ef01c70ce6ec0d545a38f13d96108bc51461b8c6f65adab7e84f138d3a1c"
+    },
+    {
+      "project": "helix",
+      "path": "scripts/package_journal.py",
+      "bytes": 4718,
+      "sha256": "b24261bd520065a5d5bad8614ff9692226fd75c33ab4b73a429d3fa92aeb5359"
+    },
+    {
+      "project": "helix",
+      "path": "scripts/train_assay_models.py",
+      "bytes": 10668,
+      "sha256": "d8f652f95a2ac58fe10a9e0a39dc33b8dded4edc80d053d3eabef0031ede7241"
+    },
+    {
+      "project": "helix",
+      "path": "scripts/train_condition_models.py",
+      "bytes": 9131,
+      "sha256": "6ea1bc3fceb0815634e67f273509fc122be4d19d26ce5b2ac1b08dda888c62a6"
+    },
+    {
+      "project": "helix",
+      "path": "scripts/verify_analysis.py",
+      "bytes": 4642,
+      "sha256": "32cc6e7cb6f58e52e874e1b8a05842630173b2ec9c0210e3d800f63476a8d884"
+    },
+    {
+      "project": "helix",
+      "path": "scripts/verify_integration.py",
+      "bytes": 2733,
+      "sha256": "8493ce8cc9a5c275002a384d4d706885563701266352764c5d64b830092c9bb9"
+    },
+    {
+      "project": "helix",
+      "path": "Start-Research.cmd",
+      "bytes": 94,
+      "sha256": "7d6729b329a082f9938dbdca8f686c8096e49289f0175430eb4f2731cad13817"
+    },
+    {
+      "project": "helix",
+      "path": "tests/test_analysis.py",
+      "bytes": 6892,
+      "sha256": "adab16892e34aab304736a66b703b7f8bc8ae19d837e8c69976613f10aba42e7"
+    },
+    {
+      "project": "helix",
+      "path": "tests/test_esm_adapter.py",
+      "bytes": 2304,
+      "sha256": "2eec938e26b01adad52d07c6f7acdd34471651a25aef29b2696a5e5ec9e7acce"
+    },
+    {
+      "project": "helix",
+      "path": "tests/test_integration.py",
+      "bytes": 4354,
+      "sha256": "6d0925a6c767b7945163b65424c30deec53abe37b66038e8b30985e8e60837d9"
+    },
+    {
+      "project": "helix",
+      "path": "tests/test_lab.py",
+      "bytes": 2687,
+      "sha256": "4f10ed06c10743cedfe37d14006f13c51598ebb118b22bdabe5bb0241c85f329"
+    },
+    {
+      "project": "helix",
+      "path": "tests/test_training_artifacts.py",
+      "bytes": 4281,
+      "sha256": "dc51629ed10226f0eec9d1b1e21b9333a047c0340fbda8b0bbe97f44423f207d"
+    },
+    {
+      "project": "helix",
+      "path": "VERIFICATION.md",
+      "bytes": 7168,
+      "sha256": "74fc7309a84e69566987aa042c4068f18b0df1aebdd867cd109882be2f131dae"
+    },
+    {
+      "project": "pet",
+      "path": "models/neural/manifest.json",
+      "bytes": 3274,
+      "sha256": "d1222a995b6310f3bd2cfc12b7e515c9c84d791421b4f1f517db974b27064aa8"
+    },
+    {
+      "project": "pet",
+      "path": "models/neural/weights.pt",
+      "bytes": 326777,
+      "sha256": "18c37a9882bc44d443c6b1799d5a2e75390d9a2e8cb0f4d32fedc802bfb69bad"
+    },
+    {
+      "project": "pet",
+      "path": "models/neural/held_out_predictions.json",
+      "bytes": 1943,
+      "sha256": "f7a5c80aca70c0390fa0ae5628a303fa1768c9b4aca20ad1689a73ae1f114f95"
+    },
+    {
+      "project": "pet",
+      "path": "data/processed/tpa_pet_ml_confirmed.csv",
+      "bytes": 1330635,
+      "sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c"
+    },
+    {
+      "project": "pet",
+      "path": "data/neural_features/index.json",
+      "bytes": 6406,
+      "sha256": "73e5836edde3d9f920509339d73d31d8149d60b85ad47a823c009658a9b2fd26"
+    },
+    {
+      "project": "pet",
+      "path": "data/structure_images/manifest.json",
+      "bytes": 5999,
+      "sha256": "deb4835f9ccfe1a04cad6fb028d17bbdf9d49244ad943700f34a05f6617dbc35"
+    },
+    {
+      "project": "pet",
+      "path": "backend/app/workspace_app.py",
+      "bytes": 1620,
+      "sha256": "dd42394742fa2bfd49892d21e4b60269fbbfcdc6859f8db7d211e21b9e20639e"
+    }
+  ]
+}

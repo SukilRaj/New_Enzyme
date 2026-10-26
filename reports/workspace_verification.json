@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-25T20:28:26.401Z",
+  "routes": [
+    {
+      "route": "overview",
+      "module": "overview",
+      "body_visible": true
+    },
+    {
+      "route": "pet",
+      "module": "pet",
+      "body_visible": true
+    },
+    {
+      "route": "conditions",
+      "module": "analysis",
+      "body_visible": true
+    },
+    {
+      "route": "images",
+      "module": "analysis",
+      "body_visible": true
+    },
+    {
+      "route": "structure",
+      "module": "pet",
+      "body_visible": true
+    },
+    {
+      "route": "evolution",
+      "module": "evolution",
+      "body_visible": true
+    },
+    {
+      "route": "training",
+      "module": "training",
+      "body_visible": true
+    },
+    {
+      "route": "evaluation",
+      "module": "analysis",
+      "body_visible": true
+    },
+    {
+      "route": "experiments",
+      "module": "overview",
+      "body_visible": true
+    }
+  ],
+  "page_errors": [],
+  "images_retained_after_navigation": true
+}

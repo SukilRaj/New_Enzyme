@@ -1,0 +1,19 @@
+{
+  "verified_at": 1792940697.444692,
+  "legacy_run_id": "analysis-1792940696-b6b871787a09",
+  "fusion_run_id": "analysis-1792940697-395dcdb58cc2",
+  "legacy_duration_seconds": 2.62,
+  "legacy_center_matches_original": true,
+  "condition_scenarios": 27,
+  "heatmap_cells": 49,
+  "sweep_points_per_axis": 13,
+  "ranked_proteins": 25,
+  "structure_protein_id": "1",
+  "generated_images": 5,
+  "image_zip_hashes_verified": true,
+  "structures_available": 13,
+  "invalid_conditions_rejected": true,
+  "registry_round_trip": true,
+  "model_sha256": "66346f85527f3642fde9aca1519e4335404efc501ae4cb490f38b8d299a72e28",
+  "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c"
+}

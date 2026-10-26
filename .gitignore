@@ -1,0 +1,12 @@
+.venv/
+models/
+runs/
+__pycache__/
+*.pyc
+*.log
+wheelhouse/
+tmp/
+node_modules/
+*.pdf 
+*.zip
+*.txt

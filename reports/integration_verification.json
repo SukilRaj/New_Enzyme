@@ -1,0 +1,29 @@
+{
+  "verified_at": 1792940692.6569068,
+  "pet_run_id": "pet-1792940691-4d2fee8a1694",
+  "pet_status": {
+    "status": "research_checkpoint_loaded",
+    "image_trained": false,
+    "thermostability_ready": false,
+    "test_metrics": {
+      "mae_um": 46.78435134887695,
+      "rmse_um": 53.457618713378906,
+      "training_median_baseline_mae_um": 387.0295715332031,
+      "log_rmse": 2.2077388763427734,
+      "r2": -2.2964554238467456,
+      "test_rows": 18,
+      "test_proteins": 5
+    }
+  },
+  "recommendations": 3,
+  "structure_coverage": 1.0,
+  "attribution_residues": 10,
+  "mutation_preview_returned": true,
+  "registry_domains": [
+    "PET",
+    "PET environment",
+    "avGFP"
+  ],
+  "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
+  "checkpoint_sha256": "18c37a9882bc44d443c6b1799d5a2e75390d9a2e8cb0f4d32fedc802bfb69bad"
+}

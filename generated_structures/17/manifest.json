@@ -1,0 +1,38 @@
+{
+  "protein_id": "17",
+  "protein_name": "BhrPETase",
+  "residues": 293,
+  "sequence_sha256": "c44fd94f3c9b4a45e0f5ef0e9d334f86c03ab46bb4df1fae7674345d4a7a6a10",
+  "source_pdb_sha256": "5143886c79400e96dd667674a9dfad83a4e05f423ada71726f7dcf32eca69d26",
+  "source_kind": "Sequence-verified AlphaFold predicted structure",
+  "representation": "20 \u00c5 capped C-alpha distance map; 8 \u00c5 C-alpha proximity map; three PCA projections",
+  "generator_sha256": "4f2f05a881a53801cbe7b8edccebf40b1f926cbdbdc2f2f0808288d1980c5769",
+  "images": [
+    {
+      "name": "distance.png",
+      "url": "/api/analysis/images/17/distance.png",
+      "sha256": "c35e7cd290e03440b1005f88cabf3686d43c1173623d6dd9aaaa6d99219b72f8"
+    },
+    {
+      "name": "contacts.png",
+      "url": "/api/analysis/images/17/contacts.png",
+      "sha256": "efd1b7cc67d4900ffdf92d07f433638d5f7f62ced97cb5ad68c27b33a15ac724"
+    },
+    {
+      "name": "front.svg",
+      "url": "/api/analysis/images/17/front.svg",
+      "sha256": "dd8fb8bece50d1740422f2124401e91a2b891dc6fb9808eac90e2b880a1c2d9c"
+    },
+    {
+      "name": "side.svg",
+      "url": "/api/analysis/images/17/side.svg",
+      "sha256": "b2f39778fff45547fa97584d4c913573d63a94be38b1e09b73905ce1a2c8557c"
+    },
+    {
+      "name": "top.svg",
+      "url": "/api/analysis/images/17/top.svg",
+      "sha256": "a682e81cf0fea8bd76fa2f0d4614be504b5f339b12007049bc79d41dbf24ade0"
+    }
+  ],
+  "note": "Coordinate-derived synthetic views, not de novo folding. C-alpha proximity is not an atom-level contact prediction. Structure images are not experimental activity labels."
+}

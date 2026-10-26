@@ -1,0 +1,120 @@
+{
+  "id": "pet-1792940694-b759772fdc7e",
+  "created": 1792940694.297276,
+  "domain": "PET",
+  "unit": "\u00b5M TPA",
+  "status": "completed",
+  "config": {
+    "temperature": 40,
+    "ph": 8,
+    "duration": 48,
+    "top_n": 3,
+    "objective": "activity",
+    "explain": false
+  },
+  "metrics": {
+    "mae_um": 46.78435134887695,
+    "rmse_um": 53.457618713378906,
+    "training_median_baseline_mae_um": 387.0295715332031,
+    "log_rmse": 2.2077388763427734,
+    "r2": -2.2964554238467456,
+    "test_rows": 18,
+    "test_proteins": 5
+  },
+  "result": {
+    "model": "ESM-2 Attention1D with optional image fusion",
+    "status": "research_checkpoint_not_validated_for_mutation_effects",
+    "objective": "activity",
+    "ranking_note": "Descending predicted TPA concentration.",
+    "conditions": {
+      "temperature": 40.0,
+      "ph": 8.0,
+      "duration": 48.0
+    },
+    "objectives_available": [
+      "tpa_activity"
+    ],
+    "objectives_pending": [
+      "thermostability"
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "protein_id": "177",
+        "protein_name": "Sub1",
+        "predicted_activity_um": 278.01476081936227,
+        "predicted_tm_c": null,
+        "image_used": false,
+        "outside_training_conditions": false,
+        "explanation": {
+          "attention_positions": [
+            156,
+            153,
+            159,
+            166,
+            171
+          ],
+          "image_ablation_delta_log1p": 0.0,
+          "note": "Attention indicates model focus, not causal residue effects. Image ablation compares the same model with its image input disabled."
+        }
+      },
+      {
+        "rank": 2,
+        "protein_id": "44",
+        "protein_name": "HiC",
+        "predicted_activity_um": 217.35334457750028,
+        "predicted_tm_c": null,
+        "image_used": false,
+        "outside_training_conditions": false,
+        "explanation": {
+          "attention_positions": [
+            161,
+            162,
+            64,
+            165,
+            180
+          ],
+          "image_ablation_delta_log1p": 0.0,
+          "note": "Attention indicates model focus, not causal residue effects. Image ablation compares the same model with its image input disabled."
+        }
+      },
+      {
+        "rank": 3,
+        "protein_id": "185",
+        "protein_name": "SM14est",
+        "predicted_activity_um": 73.76965471238175,
+        "predicted_tm_c": null,
+        "image_used": false,
+        "outside_training_conditions": false,
+        "explanation": {
+          "attention_positions": [
+            203,
+            233,
+            238,
+            205,
+            199
+          ],
+          "image_ablation_delta_log1p": 0.0,
+          "note": "Attention indicates model focus, not causal residue effects. Image ablation compares the same model with its image input disabled."
+        }
+      }
+    ],
+    "test_metrics": {
+      "mae_um": 46.78435134887695,
+      "rmse_um": 53.457618713378906,
+      "training_median_baseline_mae_um": 387.0295715332031,
+      "log_rmse": 2.2077388763427734,
+      "r2": -2.2964554238467456,
+      "test_rows": 18,
+      "test_proteins": 5
+    },
+    "limitations": [
+      "Exact-sequence groups; homologous sequences and papers may cross splits.",
+      "Small heterogeneous assay dataset; no causal or wet-lab validation.",
+      "Image branch requires sequence-only and shuffled-image ablations."
+    ]
+  },
+  "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
+  "checkpoint_sha256": "18c37a9882bc44d443c6b1799d5a2e75390d9a2e8cb0f4d32fedc802bfb69bad",
+  "artifact_url": "/api/research/pet-runs/pet-1792940694-b759772fdc7e"
+}

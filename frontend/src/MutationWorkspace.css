@@ -1,0 +1,32 @@
+.mutation-workspace > label, .mutation-panel label { display: block; margin: 16px 0 7px; font-weight: 600; font-size: 13px; }
+.mutation-workspace select, .mutation-panel input:not([type=range]) { width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 5px; color: var(--ink); background: var(--surface); font: inherit; }
+.mutation-workspace button { cursor: pointer; }
+.mutation-workspace button:disabled { cursor: wait; opacity: .6; }
+.mutation-stack { display: grid; gap: 24px; margin-top: 24px; }
+.mutation-panel { min-width: 0; padding: clamp(16px, 3vw, 28px); border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.mutation-panel h3 { font: 600 25px var(--display); margin: 12px 0; }
+.mutation-panel p { font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.mutation-panel form button { margin-top: 18px; }
+.mutation-panel details { margin: 14px 0; border-top: 1px solid var(--line); padding-top: 12px; font-size: 13px; }
+.mutation-panel summary { cursor: pointer; line-height: 1.7; }
+.mutation-panel summary span { display: inline-block; color: var(--muted); margin-left: 10px; }
+.sequence-text { display: block; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-all; max-height: 210px; overflow-y: auto; padding: 14px; background: #edf5f2; font: 12px/1.8 var(--mono); }
+.sequence-text mark { background: #ffdb8b; color: #473516; font-weight: 700; }
+.variant-result { margin-top: 22px; }
+.sequence-import { margin: 20px 0; padding: 0 16px 8px; border: 1px dashed var(--line); border-radius: 8px; background: #f7faf8; }
+.variant-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.variant-sites { padding: 4px 16px; margin: 18px 0; border-left: 3px solid var(--teal); background: #edf5f2; }
+.variant-sites button[aria-pressed=true] { background: var(--teal); color: white; }
+.file-format-help { padding: 12px 16px; background: #f5f5ec; border-radius: 6px; }
+#structure-inspector, #fasta-import { scroll-margin-top: 24px; }
+.evidence-fields { display: grid; grid-template-columns: minmax(110px, 1fr) 2fr; gap: 8px; }
+.evidence-fields > div { display: contents; }
+.evidence-fields dt { color: var(--muted); }
+.evidence-fields dd { margin: 0; overflow-wrap: anywhere; }
+.mutation-evidence-list { max-height: 520px; overflow-y: auto; padding-right: 8px; }
+.pdb-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.mutation-panel a { color: var(--teal); text-decoration: underline; }
+.mapping-success { border-left: 3px solid var(--teal); padding: 12px; background: #edf5f2; }
+.trace-viewer svg { width: 100%; display: block; }
+.trace-viewer label { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.trace-viewer input { flex: 1; min-width: 100px; accent-color: var(--teal); }
