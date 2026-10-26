@@ -52,6 +52,8 @@ RUN_DIR = OUTPUT_ROOT/(NOTEBOOK_NAME+'-'+datetime.datetime.now().strftime('%Y%m%
 RUN_DIR.mkdir(parents=True, exist_ok=False)
 os.environ['ENZAIME_ROOT'] = str(PET_ROOT)
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+os.environ.setdefault('USE_TF', '0')
+os.environ.setdefault('USE_FLAX', '0')
 sys.path.insert(0, str(BUNDLE/'lab'))
 sys.path.insert(0, str(BUNDLE/'Directed_Evolution-main'))
 bundle_manifest = json.loads((BUNDLE/'bundle_manifest.json').read_text(encoding='utf-8'))
@@ -133,6 +135,9 @@ def main():
         text=text.replace("ROOT = Path(__file__).resolve().parents[1]",'ROOT = WORK').replace("ROOT=Path(__file__).resolve().parents[1]",'ROOT=WORK')
         text=text.replace("if __name__=='__main__':",f'if {flag}:').replace("if __name__ == '__main__':",f'if {flag}:')
         return f"__file__ = str(WORK/'scripts/{name}')\n"+text
+    def data_preparation(name):
+        text=source(BUNDLE/'pet/scripts'/name)
+        return text.replace('PROJECT_ROOT = Path(__file__).resolve().parents[1]','PROJECT_ROOT = PREP_ROOT')
     engine=source(BUNDLE/'lab/engine.py').replace('ROOT = Path(__file__).resolve().parents[1]','ROOT = BUNDLE')
     replacements={'COMMON':COMMON,'DEPS':DEPS,
         'CONDITION_SOURCE':scientific_source('condition_model.py'),
@@ -143,7 +148,10 @@ def main():
         'FULL_CONDITION_STUDY':full_study('train_condition_models.py','RUN_FULL_CONDITION_STUDY'),
         'FULL_ASSAY_STUDY':full_study('train_assay_models.py','RUN_FULL_ASSAY_STUDY'),
         'FULL_GFP_ENGINE':"__file__ = str(BUNDLE/'lab/engine.py')\n"+engine,
+        'PROVENANCE_SOURCE':data_preparation('build_tpa_provenance_audit.py'),
+        'CONFIRMED_DATA_SOURCE':data_preparation('build_confirmed_tpa_dataset.py'),
     }
+    generated=[]
     for template in sorted(TEMPLATES.glob('*.py')):
         text=source(template)
         for key,value in replacements.items(): text=text.replace('{{'+key+'}}',textwrap.dedent(value).strip())
@@ -154,6 +162,7 @@ def main():
             'enzaime':{'source_template':template.name,'execution':'Top to bottom; no frontend/server required'}})
         nbf.validate(notebook)
         nbf.write(notebook,BUNDLE/(template.stem+'.ipynb'))
+        generated.append(notebook)
         # Export a readable, executable Python version with Markdown as comments.
         exported=[]
         for cell in notebook.cells:
@@ -161,6 +170,25 @@ def main():
         python='\n\n'.join(exported)+'\n';compile(python,template.stem,'exec')
         (BUNDLE/(template.stem+'.py')).write_text(python,encoding='utf-8')
         print(template.stem, len(notebook.cells),'cells')
+    # A single file for the panel, with PET followed by GFP in the same kernel.
+    # Keep the opt-in full-study notebook separate so it can use a fresh namespace.
+    intro=nbf.v4.new_markdown_cell('''# EnzAIme × Helix — complete panel demonstration
+
+**Start here.** Run all cells from top to bottom. This notebook combines the complete PET/environment and GFP demonstrations in one file. It loads real packaged data and checkpoints, exposes preprocessing and model classes, trains fresh demonstration models, evaluates them, and plots the results. No web application is required.
+
+The first half covers PET and temperature/pH/duration; the second covers GFP benchmark prediction and sequence search. Each half creates its own timestamped output folder. They are separate scientific tasks: the GFP records have no environmental labels. Small default training budgets keep the live demonstration practical. Saved historical results and newly trained demonstration results are labeled separately.
+
+For a shorter session use notebook 01 or 02 separately. Notebook 03 contains the complete opt-in training studies and original application engine. Read README.md for local/VS Code/Kaggle setup and MODEL_AND_DATA_LOCATIONS.md for the exact artifact paths.
+''')
+    combined=nbf.v4.new_notebook(cells=[intro]+generated[0].cells+generated[1].cells,metadata=generated[0].metadata)
+    combined.metadata['enzaime']={'execution':'Complete PET and GFP demonstration in one kernel; no server required'}
+    nbf.validate(combined)
+    name='00_Complete_Panel_Demonstration'
+    nbf.write(combined,BUNDLE/(name+'.ipynb'))
+    exported=['# %% [markdown]\n'+'\n'.join('# '+l for l in c.source.splitlines()) if c.cell_type=='markdown' else '# %%\n'+c.source for c in combined.cells]
+    python='\n\n'.join(exported)+'\n';compile(python,name,'exec')
+    (BUNDLE/(name+'.py')).write_text(python,encoding='utf-8')
+    print(name,len(combined.cells),'cells')
 
 
 if __name__=='__main__': main()

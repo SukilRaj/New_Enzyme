@@ -9,18 +9,13 @@
       "errors": []
     },
     "02_GFP_Benchmark_and_Directed_Evolution.ipynb": {
-      "success": false,
-      "seconds": 65.33,
+      "success": true,
+      "seconds": 78.04,
       "code_cells": 12,
-      "executed_code_cells": 10,
-      "embedded_plots": 3,
-      "errors": [
-        {
-          "name": "KeyError",
-          "message": "'decoders'"
-        }
-      ]
+      "executed_code_cells": 12,
+      "embedded_plots": 4,
+      "errors": []
     }
   },
-  "checked_at": "2026-10-26T04:17:22.323987+00:00"
+  "checked_at": "2026-10-26T04:22:39.261630+00:00"
 }

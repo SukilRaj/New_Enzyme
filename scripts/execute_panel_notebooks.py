@@ -15,7 +15,8 @@ BUNDLE=ROOT/'panel_notebooks'
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument('--only',default='',help='Notebook filename prefix, for a targeted repair check.')
+    parser.add_argument('--only',nargs='+',default=[''],help='Notebook filename prefixes, for targeted checks.')
+    parser.add_argument('--full-studies',action='store_true',help='Execute the optional full studies and ESM application check in notebook 03.')
     args=parser.parse_args()
     kernels=ROOT/'tmp/panel_jupyter/kernels/enzaime-panel'
     kernels.mkdir(parents=True,exist_ok=True)
@@ -31,8 +32,12 @@ def main():
     (BUNDLE/'executed').mkdir(exist_ok=True)
     report_path=ROOT/'reports/notebook_execution.json'
     report=json.loads(report_path.read_text()) if report_path.exists() else {'notebooks':{}}
-    for path in sorted(BUNDLE.glob(args.only+'*.ipynb')):
+    for path in sorted(p for p in BUNDLE.glob('*.ipynb') if any(p.name.startswith(prefix) for prefix in args.only)):
         notebook=nbformat.read(path,as_version=4)
+        if args.full_studies and path.name.startswith('03_'):
+            for cell in notebook.cells:
+                if cell.cell_type=='code':
+                    cell.source=cell.source.replace('RUN_FULL_CONDITION_STUDY=False','RUN_FULL_CONDITION_STUDY=True').replace('RUN_FULL_ASSAY_STUDY=False','RUN_FULL_ASSAY_STUDY=True').replace('RUN_APPLICATION_GFP=False','RUN_APPLICATION_GFP=True').replace("APPLICATION_ENGINE='baseline'","APPLICATION_ENGINE='esm'")
         start=time.time();print('START '+path.name,flush=True)
         def progress(cell,cell_index,**kwargs):
             if cell.cell_type=='code': print(f'  cell {cell_index+1}/{len(notebook.cells)}: '+cell.source.splitlines()[0][:100],flush=True)
@@ -46,6 +51,8 @@ def main():
             errors=[output for cell in notebook.cells if cell.cell_type=='code' for output in cell.get('outputs',[]) if output.output_type=='error']
             images=sum('image/png' in output.get('data',{}) for cell in notebook.cells if cell.cell_type=='code' for output in cell.get('outputs',[]))
             report['notebooks'][path.name]={'success':success,'seconds':round(time.time()-start,2),
+                'source_sha256':__import__('hashlib').sha256(path.read_bytes()).hexdigest(),
+                'full_studies_enabled':bool(args.full_studies and path.name.startswith('03_')),
                 'code_cells':sum(c.cell_type=='code' for c in notebook.cells),
                 'executed_code_cells':sum(c.cell_type=='code' and c.execution_count is not None for c in notebook.cells),
                 'embedded_plots':images,'errors':[{'name':e.ename,'message':e.evalue} for e in errors]}

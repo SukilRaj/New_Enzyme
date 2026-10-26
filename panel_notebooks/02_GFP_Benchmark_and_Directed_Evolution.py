@@ -32,6 +32,8 @@ RUN_DIR = OUTPUT_ROOT/(NOTEBOOK_NAME+'-'+datetime.datetime.now().strftime('%Y%m%
 RUN_DIR.mkdir(parents=True, exist_ok=False)
 os.environ['ENZAIME_ROOT'] = str(PET_ROOT)
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+os.environ.setdefault('USE_TF', '0')
+os.environ.setdefault('USE_FLAX', '0')
 sys.path.insert(0, str(BUNDLE/'lab'))
 sys.path.insert(0, str(BUNDLE/'Directed_Evolution-main'))
 bundle_manifest = json.loads((BUNDLE/'bundle_manifest.json').read_text(encoding='utf-8'))
@@ -391,7 +393,9 @@ if ESM_FOLDER=='esm2_8m':
     old_path=verify_file('runs/20261024-092703-afed29/decoder.pt')
     old_state=torch.load(old_path,map_location='cpu',weights_only=True)
     old_heads=[]
-    for state in old_state['decoders']:
+    # The earlier single-head checkpoint used 'decoder'; later ensembles use 'decoders'.
+    old_weights=old_state['decoders'] if 'decoders' in old_state else [old_state['decoder']]
+    for state in old_weights:
         head=Decoder(encoder.config.hidden_size,old_state['hidden_dim']).to(DEVICE);head.load_state_dict(state);old_heads.append(head.eval())
     old_test=pd.read_csv(verify_file('runs/20261024-092703-afed29/holdout.csv'))
     old_pred,_=predict_head_features(old_heads,encode_sequences(old_test.sequence))

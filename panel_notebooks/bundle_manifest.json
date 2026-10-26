@@ -7,6 +7,38 @@
     "pet": "D:\\Final_Year_Project\\EnzAIme_ML"
   },
   "files": {
+    "00_Complete_Panel_Demonstration.ipynb": {
+      "sha256": "70019015c2d4d7a6e0e1c2c4ac9edc218fa8bc89532f09553262593af158a375",
+      "bytes": 98666
+    },
+    "00_Complete_Panel_Demonstration.py": {
+      "sha256": "88ce684ed7b145ad1857d5e60b50e43959016932a53939545c177b65b8ea3bcb",
+      "bytes": 80971
+    },
+    "01_PET_Environment_Training_Evaluation.ipynb": {
+      "sha256": "3bc204e49d865607b0f1b85563ac41c90fa87be1866629386a939f9f82c96e3a",
+      "bytes": 62585
+    },
+    "01_PET_Environment_Training_Evaluation.py": {
+      "sha256": "7039f242e6a1717dd981418f873306ed55cc703ca7f7c3f360d1a1970fc84274",
+      "bytes": 51408
+    },
+    "02_GFP_Benchmark_and_Directed_Evolution.ipynb": {
+      "sha256": "f87e3db943ddd041e6848db716a5f02be4186edddfb0c262116dd8ada1c6295a",
+      "bytes": 35319
+    },
+    "02_GFP_Benchmark_and_Directed_Evolution.py": {
+      "sha256": "1bbcbb5be063dc59c975626de1423875e216221423a6f3772f044cdbb32000da",
+      "bytes": 28468
+    },
+    "03_Full_Training_and_Source_Code.ipynb": {
+      "sha256": "e1a48a03a650e1db32da2a3a9d9a4920b7dfab54e34cfe570b29ab6d69ba2d38",
+      "bytes": 55661
+    },
+    "03_Full_Training_and_Source_Code.py": {
+      "sha256": "32596da467b2fc499b4956021443795568c503094e730d19c725e9168fc0b842",
+      "bytes": 47143
+    },
     "Directed_Evolution-main/de/__init__.py": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0
@@ -155,6 +187,14 @@
       "sha256": "1c4a68c0858a87808429189078cea815eb6f11bb4e4c30da1e0b7bae8626690b",
       "bytes": 2464
     },
+    "executed/01_PET_Environment_Training_Evaluation.ipynb": {
+      "sha256": "2f824ebbb2925618ce5cf5d70627291f0647256a08ef557765ea672a0b3813af",
+      "bytes": 830135
+    },
+    "executed/02_GFP_Benchmark_and_Directed_Evolution.ipynb": {
+      "sha256": "9f28e7ef926e8f4c04b17bf5db9b83d4e3641fc187a4e338bc930bef61303e76",
+      "bytes": 239440
+    },
     "lab/assay_model.py": {
       "sha256": "11d4440562a9ca51aa93abb7ce5ab94bf7d4fe6563fb7431230bcf58a981d337",
       "bytes": 8630
@@ -170,6 +210,14 @@
     "lab/structure_images.py": {
       "sha256": "4f2f05a881a53801cbe7b8edccebf40b1f926cbdbdc2f2f0808288d1980c5769",
       "bytes": 6844
+    },
+    "MODEL_AND_DATA_LOCATIONS.md": {
+      "sha256": "352193c7e391d7f3cb66a8981b7f0a171197215196f0e6257889b78da1dcc6a9",
+      "bytes": 1773
+    },
+    "model_inventory.json": {
+      "sha256": "005f81c8fd156c479ebd3930770c7b342fa6a76a0eb728e25dc48ff1ecf5b9b1",
+      "bytes": 1403
     },
     "models/assay_v2/train-20261024-160717/context_audit.json": {
       "sha256": "7feef476e905d9df781848bc3e5d6df3bb2b9cc2f23c1f7ffa205a3acb407cd6",
@@ -283,6 +331,10 @@
       "sha256": "0b82cc0a7c7cf9e567b1e5892d793285b9fbae822c964ca48696f7db44598e03",
       "bytes": 93
     },
+    "pet/backend/app/services/mutation.py": {
+      "sha256": "c7666423db79a43665fff34b4b804c8841aa17b337766075983bca7070103e7a",
+      "bytes": 6386
+    },
     "pet/backend/app/services/neural_oracle.py": {
       "sha256": "958f078c1ca8accf22cc4d3fbefb9fd88771a395cd04b5f0d9b732d918deef10",
       "bytes": 2110
@@ -290,6 +342,14 @@
     "pet/backend/app/services/neural_recommender.py": {
       "sha256": "413594b5181c6cf6c8513d7d3448608113ced4a21973272ebfa911d35aed21ab",
       "bytes": 10028
+    },
+    "pet/backend/app/services/structure.py": {
+      "sha256": "c8128873af499bf74c800b83d08f024a3fd1ceca4efb8d9d71d2296532e76581",
+      "bytes": 5843
+    },
+    "pet/data/fireprotdb/model_protein_mutations.csv": {
+      "sha256": "39d2624418752de3d6abad9806d13dc652feacd65bb1c9a815e22afe4f5e7763",
+      "bytes": 3694
     },
     "pet/data/neural_features/02de5ae47939a2d570ee85c8e91b6feabf9f87891d056ed4feaef4727aa141dd.npz": {
       "sha256": "53a021b40e35f1df1ece9bb859034ba9f0e70e088236f6b49cbf386e78da7533",
@@ -394,6 +454,14 @@
     "pet/data/neural_features/index.json": {
       "sha256": "73e5836edde3d9f920509339d73d31d8149d60b85ad47a823c009658a9b2fd26",
       "bytes": 6406
+    },
+    "pet/data/processed/tpa_activity_provenance_audit.csv": {
+      "sha256": "42f322d3e04deeb991e1c52b97158b6b11bf045289e341e2b476e2ea9625d518",
+      "bytes": 1389911
+    },
+    "pet/data/processed/tpa_pet_ambiguous_excluded.csv": {
+      "sha256": "2374320ec54ce5e891f1cca789917c0a17e9acde3fdbf9b5ac8ed03478e6b478",
+      "bytes": 60718
     },
     "pet/data/processed/tpa_pet_ml_confirmed.csv": {
       "sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
@@ -571,6 +639,14 @@
       "sha256": "4cfa03e833bb9e8f251507a4513976c05f7ac9beee99f2b22c42bfe64dccff80",
       "bytes": 57004
     },
+    "pet/data/tpa_pet_ml_dataset.csv": {
+      "sha256": "350fe5bab4b106480b3537f98bd855ef0ea7f59b8fc6c2be6c4493ce12c47c28",
+      "bytes": 69549
+    },
+    "pet/master_dataset.csv": {
+      "sha256": "7ca17427d9fae576d82fa34d12c721318ca8ebc4d19716bb668f4c4b9d7d6374",
+      "bytes": 24165777
+    },
     "pet/models/neural/held_out_predictions.json": {
       "sha256": "f7a5c80aca70c0390fa0ae5628a303fa1768c9b4aca20ad1689a73ae1f114f95",
       "bytes": 1943
@@ -583,6 +659,18 @@
       "sha256": "18c37a9882bc44d443c6b1799d5a2e75390d9a2e8cb0f4d32fedc802bfb69bad",
       "bytes": 326777
     },
+    "pet/reports/results/tpa_ambiguous_review.md": {
+      "sha256": "84835c95f6dfc4d9743acacc21bbcaeb37c46c89cabcc37ea28dfbd79b967013",
+      "bytes": 10497
+    },
+    "pet/scripts/build_confirmed_tpa_dataset.py": {
+      "sha256": "5026fda761bfcd102b2341e78956737d4c08dacb603509be12ef1f542888af28",
+      "bytes": 9318
+    },
+    "pet/scripts/build_tpa_provenance_audit.py": {
+      "sha256": "52364a81770d3005a2e515e5d6b0f81335e7722e9f745242d6b098972d0ff9f8",
+      "bytes": 14879
+    },
     "pet/scripts/prepare_neural_features.py": {
       "sha256": "0fb025f309c04498c1c8ae92ee893fecc74faf29f1f6caf70916edd331f81513",
       "bytes": 3527
@@ -594,6 +682,18 @@
     "pet/scripts/train_neural_oracle.py": {
       "sha256": "9229e9414248b582c0fc0d75a84e597cfc3d3da7350de9a09cdbba7547532233",
       "bytes": 7706
+    },
+    "README.md": {
+      "sha256": "7a3e1b51e8aedf2c0d7b294db4eba85444afbafd3d0c55d5bb59346936dd85fa",
+      "bytes": 9766
+    },
+    "requirements-kaggle.txt": {
+      "sha256": "309ad0794598e8544207b41045c76eef6a1f5b0a67334d73432c631d94e5e64e",
+      "bytes": 268
+    },
+    "requirements-notebook.txt": {
+      "sha256": "90f12c957d2cbc19bb1e02c02dc296abb08fe148b668f6c1b94f3de41a80b641",
+      "bytes": 95
     },
     "runs/20261023-162906-a42ad8/baseline.pkl": {
       "sha256": "98b259f35c5e9f55e7c2fbebc0f9e4d0e9c64247b7a9d64371f6d8aa1fd228c0",
@@ -686,6 +786,10 @@
     "scripts/train_condition_models.py": {
       "sha256": "6ea1bc3fceb0815634e67f273509fc122be4d19d26ce5b2ac1b08dda888c62a6",
       "bytes": 9131
+    },
+    "Start-Notebooks.cmd": {
+      "sha256": "c12538d01229ee8f12b930aa2b2f8892e88360c035b88d99a2da1c91119edbd7",
+      "bytes": 300
     }
   }
 }

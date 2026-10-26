@@ -28,11 +28,15 @@ def main():
             if path.is_file(): copy_file(path, BUNDLE/directory/path.name)
     for directory in ('data/processed', 'data/neural_features', 'data/structure_images', 'models/neural'):
         for path in (PET/directory).rglob('*'):
-            if path.is_file() and (directory != 'data/processed' or path.name == 'tpa_pet_ml_confirmed.csv'):
+            if path.is_file():
                 copy_file(path, BUNDLE/'pet'/path.relative_to(PET))
-    for name in ('neural_oracle.py', 'neural_recommender.py'):
+    for relative in ('master_dataset.csv','data/tpa_pet_ml_dataset.csv','data/fireprotdb/model_protein_mutations.csv',
+                     'reports/results/tpa_ambiguous_review.md'):
+        copy_file(PET/relative,BUNDLE/'pet'/relative)
+    for name in ('neural_oracle.py', 'neural_recommender.py','mutation.py','structure.py'):
         copy_file(PET/'backend/app/services'/name, BUNDLE/'pet/backend/app/services'/name)
-    for name in ('train_neural_oracle.py', 'prepare_neural_features.py', 'prepare_structure_images.py'):
+    for name in ('train_neural_oracle.py', 'prepare_neural_features.py', 'prepare_structure_images.py',
+                 'build_tpa_provenance_audit.py','build_confirmed_tpa_dataset.py'):
         copy_file(PET/'scripts'/name, BUNDLE/'pet/scripts'/name)
     upstream = ROOT/'Directed_Evolution-main'
     for path in upstream.rglob('*'):

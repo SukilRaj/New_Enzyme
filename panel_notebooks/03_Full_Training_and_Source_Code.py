@@ -32,6 +32,8 @@ RUN_DIR = OUTPUT_ROOT/(NOTEBOOK_NAME+'-'+datetime.datetime.now().strftime('%Y%m%
 RUN_DIR.mkdir(parents=True, exist_ok=False)
 os.environ['ENZAIME_ROOT'] = str(PET_ROOT)
 os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+os.environ.setdefault('USE_TF', '0')
+os.environ.setdefault('USE_FLAX', '0')
 sys.path.insert(0, str(BUNDLE/'lab'))
 sys.path.insert(0, str(BUNDLE/'Directed_Evolution-main'))
 bundle_manifest = json.loads((BUNDLE/'bundle_manifest.json').read_text(encoding='utf-8'))
