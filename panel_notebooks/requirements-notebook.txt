@@ -1,0 +1,5 @@
+-r requirements-kaggle.txt
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==6.29.5
+notebook==7.3.3

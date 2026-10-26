@@ -7,6 +7,5 @@ __pycache__/
 wheelhouse/
 tmp/
 node_modules/
-*.pdf 
 *.zip
-*.txt
+
