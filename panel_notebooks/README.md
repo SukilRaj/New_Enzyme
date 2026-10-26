@@ -1,18 +1,22 @@
 # EnzAIme × Helix: complete notebook demonstration package
 
-This folder is a self-contained scientific handover: three notebooks, equivalent Python files, complete training functions/source, the PET and avGFP datasets, cached ESM features, saved checkpoints, offline pretrained ESM models, and saved evaluation evidence. No frontend, Flask/FastAPI server or original linked PET folder is needed for the default notebook workflows.
+This folder is a self-contained scientific handover: one combined panel notebook and four focused notebooks, equivalent Python files, complete training functions/source, the PET and avGFP datasets, cached ESM features, saved checkpoints, offline pretrained ESM models, and saved evaluation evidence. No frontend, Flask/FastAPI server or original linked PET folder is needed for the default notebook workflows.
 
 ## Open these notebooks
+
+**Start with `00_Complete_Panel_Demonstration.ipynb`.** It combines notebooks 01 and 02 into one file and runs both workflows in one kernel. Use the focused notebooks below when you want to demonstrate only one part. Do not run all five notebooks in succession unless you intend to repeat the combined demonstration.
 
 1. **01_PET_Environment_Training_Evaluation.ipynb** — dataset loading, cleaning/deduplication, environmental data, sequence-group splits, original neural architecture and inference, historical test reproduction, fresh regression and neural-head training, saved assay-model calls, response surfaces, sensitivity, scenario ranking, grouped comparisons, residuals, five structure images and a 3D reference view.
 2. **02_GFP_Benchmark_and_Directed_Evolution.ipynb** — full benchmark loading, original Ridge checkpoint evaluation, a shared train/validation/test split, fresh Ridge and three-head ESM Attention1D training, matched predictive evaluation, model save/reload, original ESM-head reproduction, masked-language-model substitutions, greedy/uncertainty-diversity search, plots and candidate FASTA export.
 3. **03_Full_Training_and_Source_Code.ipynb** — the complete condition-study and assay-study training scripts plus the full GFP application engine, visible as executable code. Long study calls are opt-in. A source inventory points to the downloaded paper implementation and original PET preprocessing/feature-generation scripts.
 
-Each major operation is implemented in visible notebook cells. Model classes imported by historical pickle files are also supplied under `lab/`. The `.py` equivalents use VS Code `# %%` cells and can be inspected without Jupyter.
+4. **04_Data_Provenance_and_Feature_Preparation.ipynb** — rebuilds the 227-record provenance audit and the 221-row confirmed dataset from the supplied source records, verifies every parsed column against the packaged CSV, and regenerates ESM-2 35M per-residue features. The default encodes one protein; a flag enables all 25.
+
+Each major operation is implemented in visible notebook cells. Model classes imported by historical pickle files are also supplied under `lab/`. The `.py` equivalents use VS Code `# %%` cells and can be inspected without Jupyter. `PANEL_GUIDE.md` maps each requested operation to its notebook/function. `executed/` holds tested notebook copies with tables and plots already visible; `verification.json` records execution results.
 
 ## Run in the installed local system
 
-Open `D:\Enzyme_ML_new\panel_notebooks` in VS Code. Install/enable the Python and Jupyter extensions if needed. Open notebook 01 and select **Python Environments → D:\Enzyme_ML_new\.venv\Scripts\python.exe** as its kernel. Choose **Run All**, or run one cell at a time with Shift+Enter. Repeat with a fresh kernel for notebook 02.
+Open `D:\Enzyme_ML_new\panel_notebooks` in VS Code. Install/enable the Python and Jupyter extensions if needed. Open notebook 00 and select **Python Environments → D:\Enzyme_ML_new\.venv\Scripts\python.exe** as its kernel. Choose **Run All**, or run one cell at a time with Shift+Enter. Use a fresh kernel when opening a different focused notebook.
 
 Alternatively, in a PowerShell terminal:
 
@@ -73,6 +77,7 @@ Saved pickle files are trusted local project artifacts and are checked against t
 ## Datasets, environment and preprocessing
 
 - PET source: `pet/data/processed/tpa_pet_ml_confirmed.csv` (221 rows); preprocessing reproduces 208 eligible measurements, 25 sequence groups and 22 study IDs. Temperature, pH, duration and measured TPA are present. Original source-record JSON and study provenance are retained.
+- Earlier collected records and audit: `pet/master_dataset.csv`, `pet/data/tpa_pet_ml_dataset.csv`, `pet/data/processed/tpa_activity_provenance_audit.csv`, and `pet/reports/results/tpa_ambiguous_review.md`. Notebook 04 rebuilds the confirmed dataset from these inputs.
 - Cached frozen ESM representations: `pet/data/neural_features/*.npz`, with `index.json` mapping protein IDs to sequence hashes. No expensive re-encoding is necessary for the PET demonstration.
 - Structure evidence: `pet/data/structure_images/` contains 13 sequence-matched AlphaFold reference structures and metadata. Five visualizations derive from these coordinates; they are not newly predicted mutant folds.
 - GFP: `Directed_Evolution-main/preprocessed_data/avGFP/avGFP.csv` (51,715 sequence/fitness rows). It has no per-observation environmental labels.
@@ -80,7 +85,7 @@ Saved pickle files are trusted local project artifacts and are checked against t
 
 ## Recommended panel sequence
 
-Start with notebook 01: show the actual files, dataset rows and environmental columns; show cleaning and group separation; load the original checkpoint and reproduce its test; train a fresh model; change the input conditions in `predict_pet`; then display the surfaces, residuals and structure images. Use notebook 02 to demonstrate real pretrained ESM loading, Attention1D training and same-split comparison. Use notebook 03 to show the full research training code and opt-in experiment controls.
+Start with notebook 00: show the actual files, dataset rows and environmental columns; show cleaning and group separation; load the original checkpoint and reproduce its test; train a fresh model; change the input conditions in `predict_pet`; then display the surfaces, residuals and structure images. Continue to the GFP section for pretrained ESM loading, Attention1D training and same-split comparison. Use notebook 03 for the full research training code and opt-in experiment controls, and notebook 04 for original data provenance and feature generation.
 
 Default budgets are modest so code can run during a demonstration. The full studies are opt-in, and every new run has its own timestamped output directory. Run everything once on the panel machine beforehand; do not rely on first-time package installation during the demonstration.
 

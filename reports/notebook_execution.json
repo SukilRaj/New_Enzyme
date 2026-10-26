@@ -15,7 +15,37 @@
       "executed_code_cells": 12,
       "embedded_plots": 4,
       "errors": []
+    },
+    "00_Complete_Panel_Demonstration.ipynb": {
+      "success": true,
+      "seconds": 77.04,
+      "source_sha256": "2d3876b7cc8b97d9a772ad7e72c4da0f20467fedf97b1e1a293bb8f6ad8203a2",
+      "full_studies_enabled": false,
+      "code_cells": 31,
+      "executed_code_cells": 31,
+      "embedded_plots": 13,
+      "errors": []
+    },
+    "03_Full_Training_and_Source_Code.ipynb": {
+      "success": true,
+      "seconds": 368.23,
+      "source_sha256": "04466949e3c9bf36cc3a0fc97a520a5955041b03c203e5ddb822af1858688033",
+      "full_studies_enabled": true,
+      "code_cells": 8,
+      "executed_code_cells": 8,
+      "embedded_plots": 0,
+      "errors": []
+    },
+    "04_Data_Provenance_and_Feature_Preparation.ipynb": {
+      "success": true,
+      "seconds": 13.96,
+      "source_sha256": "d1bb1f37845c8b46b61eb2ae125ed9aded8521f713234a0a0d23328850b3e40b",
+      "full_studies_enabled": false,
+      "code_cells": 8,
+      "executed_code_cells": 8,
+      "embedded_plots": 1,
+      "errors": []
     }
   },
-  "checked_at": "2026-10-26T04:22:39.261630+00:00"
+  "checked_at": "2026-10-26T04:32:34.907899+00:00"
 }

@@ -1,0 +1,31 @@
+{
+  "config": {
+    "engine": "esm",
+    "samples": 100,
+    "epochs": 1,
+    "steps": 1,
+    "population": 2,
+    "seed": 42,
+    "model": "facebook/esm2_t6_8M_UR50D",
+    "selection": "greedy"
+  },
+  "dataset_sha256": "6237285d42f371a0f11897ffd6270a9f584150ad376feee36085a5eb51c9d32a",
+  "train_count": 80,
+  "test_count": 20,
+  "split": "deduplicated sequences; seeded random 80/20; not mutation-distance split",
+  "independent_oracle": false,
+  "paper_reproduction": false,
+  "selection_method": "greedy predicted-fitness selection",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "engine_sha256": "c2e35a67df492703bad678beb5b7562c294651f3f17148ee762e3945a8ac49fa",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.5.2",
+    "torch": "2.5.1",
+    "transformers": "4.44.2"
+  },
+  "model_revision": "c731040fcd8d73dceaa04b0a8e6329b345b0f5df",
+  "device": "cpu",
+  "model_loaded_from": "local cache"
+}

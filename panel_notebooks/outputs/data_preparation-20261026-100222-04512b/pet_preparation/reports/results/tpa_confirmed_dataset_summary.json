@@ -1,0 +1,69 @@
+{
+  "total_original_records": 227,
+  "confirmed_records": 221,
+  "excluded_ambiguous_records": 6,
+  "protein_count": 25,
+  "unique_proteins": 25,
+  "target_statistics": {
+    "field": "target_value_standardized",
+    "min": 0.3,
+    "max": 47000.0,
+    "mean": 1472.0770740185205,
+    "median": 194.8,
+    "standard_deviation": 4976.831752022031
+  },
+  "condition_statistics": {
+    "ph": {
+      "min": 7.0,
+      "max": 9.0
+    },
+    "temperature_c": {
+      "min": 25.0,
+      "max": 80.0
+    },
+    "duration_hours": {
+      "min": 0.0,
+      "max": 672.0
+    }
+  },
+  "unit_counts": {
+    "µM": 137,
+    "µmol/L": 45,
+    "mM": 27,
+    "µg/mL": 12
+  },
+  "protein_record_counts": {
+    "44": 75,
+    "42": 20,
+    "149": 13,
+    "483": 12,
+    "1": 12,
+    "13": 12,
+    "481": 12,
+    "177": 12,
+    "195": 8,
+    "37": 8,
+    "15": 8,
+    "185": 7,
+    "17": 5,
+    "148": 2,
+    "4": 2,
+    "41": 2,
+    "495": 2,
+    "496": 2,
+    "240": 1,
+    "223": 1,
+    "224": 1,
+    "225": 1,
+    "226": 1,
+    "11": 1,
+    "25": 1
+  },
+  "zero_duration_count": 8,
+  "duplicate_group_count": 4,
+  "duplicate_rows_involved": 9,
+  "repeated_condition_group_count": 48,
+  "uniprot_available_count": 15,
+  "uniprot_missing_count": 10,
+  "missing_confirmed_values": {}
+}

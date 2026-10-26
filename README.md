@@ -1,5 +1,9 @@
 # Helix — local protein evolution laboratory
 
+## Runnable notebooks for the panel
+
+Open [the combined panel notebook](panel_notebooks/00_Complete_Panel_Demonstration.ipynb) in VS Code with this project's `.venv` kernel, or run `Start-Notebooks.cmd` from this folder. The [notebook run guide](panel_notebooks/README.md) covers local and Kaggle setup. The [panel guide](panel_notebooks/PANEL_GUIDE.md) maps preprocessing, environmental data, training, model calls, evaluation, structure visualization and directed evolution to visible code. Data, saved weights, offline ESM models and full-study source are included in `panel_notebooks/`; no frontend is required.
+
 ## Integrated EnzAIme × Helix platform
 
 Start with the [VS Code run guide](docs/RUN_IN_VS_CODE.md), [complete project and journal summary](docs/journal/PROJECT_AND_JOURNAL_SUMMARY.md), or [FASTA and structure guide](docs/SEQUENCE_AND_STRUCTURE_GUIDE.md). The journal folder includes a formatted PDF, editable source, figures, metric tables and evidence hashes. The summary distinguishes completed implementation from unvalidated research claims.

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "fresh_panel_demonstration_checkpoint",
+  "architecture": {
+    "sequence_dim": 480,
+    "image_dim": 512,
+    "hidden": 64
+  },
+  "encoder": "facebook/esm2_t12_35M_UR50D",
+  "image_encoder": "ResNet18_Weights.IMAGENET1K_V1",
+  "image_trained": false,
+  "target": "log1p_tpa_um",
+  "environment_order": [
+    "temperature_c",
+    "ph",
+    "duration_hours"
+  ],
+  "environment_mean": [
+    53.104651162790695,
+    7.773255813953488,
+    141.2906976744186
+  ],
+  "environment_std": [
+    14.074163257186575,
+    0.6826631193782337,
+    144.04237637770532
+  ],
+  "environment_min": [
+    30.0,
+    7.0,
+    1.0
+  ],
+  "environment_max": [
+    80.0,
+    9.0,
+    672.0
+  ],
+  "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
+  "seed": 42,
+  "rows_used": 208,
+  "rows_excluded_or_deduplicated": 13,
+  "split_sequence_hashes": {
+    "train": [
+      "12c59fe9dab495ee536f1c2a5fc28c66e212192096c2351044d4dc139042f5af",
+      "1800fe34cae50a0366f6a8061e5dc6104ffdddfc3a4bbba82443e8e74610945c",
+      "1d22c868245e4136edd8bf8e5a9751fbb6cbb880a38de0203aa439aba447b972",
+      "349f547d8350a79db4682c751feb4889b2d7de7ff3573c0f3dba8bb7e4290242",
+      "36c75ebc397212b4e97848e9c78eb6002df3b9420afee7184b3ed37af532f833",
+      "506b2a7f74380c141ab006f9059593b556a77cdf415af398b8e5b8fd879e5dde",
+      "50b3bc724bafa5c0e584443a8b08da090a4a55594fa7ae3c92acd462841b22de",
+      "5f0b46752bafe1a0c0937e26251c04ecbf0453abc4973e93d19cf4c3b40bb68c",
+      "ac17bc06b5acb50d8a8513bf11f7472a6b07a6d69e85e470dcb47c0a25db07b7",
+      "b4990ceeaae355e701b15a05626819f11ce10634e33ec4a60a4824396655ea18",
+      "c44fd94f3c9b4a45e0f5ef0e9d334f86c03ab46bb4df1fae7674345d4a7a6a10",
+      "d3540702aeef922186f5203505d4944e32796995cacfc678bad153a735022c32",
+      "d542ffdfb244a4abd976028f3ca5b98b8499d465d8ab11bf1a56003fb9258f85",
+      "db5514329644b884f740ee3a9343c2b9fadcb3b9935ef75628f7b81104b5e855",
+      "e5014ab42856b5807ef5170d01a0d5da314a320b39e61e3058fba58c10a1bc42"
+    ],
+    "validation": [
+      "390805491876daf0ea305dcdc9bb342ef491ea34470e0f636fb39acb9767a939",
+      "46f35107bc2c643277227086fba00a6302b4b7d395c41c92ff0fe8d1fc4b08a4",
+      "548618f6b5a64b1bff32151bff7baafb2af24feb9321da1e82235e2e177e5ddd",
+      "c779aced624d19c4dcf78b454e63a6314c0c887d128e22211b64f453d5bd63b8",
+      "f68dec9eebd3c10ecd25c56feb3b36c8327d336a210eebb8179dc37095840649"
+    ],
+    "test": [
+      "06e97c97cbe6460a868e26e70d0d47f776cd2f324d9f978bf00f9804ad51128f",
+      "4b8cf34779ab88479e7dd8cd3bd89b3eb1dc20b14791b3f2f1c62ef0c1db1785",
+      "50dcfd817c79f20a1a22125c656e82ecaf8e357d0f7c51a5d89eb08aa669a7e5",
+      "bbf2a725d118ae58c5b41fab4523572f0742915e4c713d52cce90942386d2644",
+      "eff7f2ddd9f7c3e28df978833fa105a7643bc89706259ce5bd25ea4907599f95"
+    ]
+  },
+  "limitations": [
+    "Exact-sequence groups; homologous sequences and papers may cross splits.",
+    "Small heterogeneous assay dataset; no causal or wet-lab validation.",
+    "Image branch requires sequence-only and shuffled-image ablations."
+  ],
+  "best_epoch": 4,
+  "test_metrics": {
+    "mae_um": 38.84869100223848,
+    "rmse_um": 43.412292539372125,
+    "r2": -1.1739698489251804,
+    "log_rmse": 2.044400076133622,
+    "spearman": 0.2765424695529595,
+    "rows": 18
+  }
+}

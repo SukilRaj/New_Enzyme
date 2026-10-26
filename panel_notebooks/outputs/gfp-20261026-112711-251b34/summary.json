@@ -1,0 +1,39 @@
+{
+  "dataset_sha256": "6237285d42f371a0f11897ffd6270a9f584150ad376feee36085a5eb51c9d32a",
+  "available_sequences": 51715,
+  "demonstration_samples": 200,
+  "split_sizes": {
+    "train": 120,
+    "validation": 40,
+    "test": 40
+  },
+  "seed": 42,
+  "head_epochs_max": 18,
+  "ensemble_size": 3,
+  "encoder": {
+    "model": "facebook/esm2_t6_8M_UR50D",
+    "revision": "c731040fcd8d73dceaa04b0a8e6329b345b0f5df"
+  },
+  "matched_comparison": [
+    {
+      "Model": "One-hot Ridge",
+      "MAE": 0.8157790495931326,
+      "RMSE": 0.9465115852108955,
+      "R2": 0.15403410692870556,
+      "Spearman": 0.3881801125703565,
+      "n": 40
+    },
+    {
+      "Model": "Frozen ESM + 3 Attention1D heads",
+      "MAE": 0.981232411760111,
+      "RMSE": 1.1486058447658778,
+      "R2": -0.24578480536007818,
+      "Spearman": 0.3061913696060038,
+      "n": 40
+    }
+  ],
+  "independent_oracle": false,
+  "paper_reproduction": false,
+  "environmental_labels_present": false,
+  "output_directory": "D:\\Enzyme_ML_new\\panel_notebooks\\outputs\\gfp-20261026-112711-251b34"
+}

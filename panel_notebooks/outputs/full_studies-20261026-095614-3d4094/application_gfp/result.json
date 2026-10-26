@@ -1,0 +1,151 @@
+{
+  "metrics": {
+    "rmse": 1.2713678144767049,
+    "mae": 0.8194580722703823,
+    "spearman": -0.05413533834586466,
+    "train_count": 80,
+    "test_count": 20
+  },
+  "history": [
+    {
+      "step": 1,
+      "best": 3.692615032196045,
+      "mean": 3.6925132274627686,
+      "unique": 2,
+      "mean_uncertainty": 0.0,
+      "mean_pairwise_distance": 2.0
+    }
+  ],
+  "candidates": [
+    {
+      "sequence": "SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQEGTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDYKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNERRDHMVLLEFVTAAGITHGMDELYK",
+      "predicted_fitness": 3.692615032196045,
+      "uncertainty": 0.0,
+      "selection_score": 3.692615032196045,
+      "mutations": "R95G",
+      "distance": 1
+    },
+    {
+      "sequence": "SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDYKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIKDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNERRDHMVLLEFVTAAGITHGMDELYK",
+      "predicted_fitness": 3.692411422729492,
+      "uncertainty": 0.0,
+      "selection_score": 3.692411422729492,
+      "mutations": "E171K",
+      "distance": 1
+    }
+  ],
+  "parent": "SKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTLSYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIFFKDDGNYKTRAEVKFEGDTLVNRIELKGIDYKEDGNILGHKLEYNYNSHNVYIMADKQKNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNERRDHMVLLEFVTAAGITHGMDELYK",
+  "manifest": {
+    "config": {
+      "engine": "esm",
+      "samples": 100,
+      "epochs": 1,
+      "steps": 1,
+      "population": 2,
+      "seed": 42,
+      "model": "facebook/esm2_t6_8M_UR50D",
+      "selection": "greedy"
+    },
+    "dataset_sha256": "6237285d42f371a0f11897ffd6270a9f584150ad376feee36085a5eb51c9d32a",
+    "train_count": 80,
+    "test_count": 20,
+    "split": "deduplicated sequences; seeded random 80/20; not mutation-distance split",
+    "independent_oracle": false,
+    "paper_reproduction": false,
+    "selection_method": "greedy predicted-fitness selection",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "engine_sha256": "c2e35a67df492703bad678beb5b7562c294651f3f17148ee762e3945a8ac49fa",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "scikit-learn": "1.5.2",
+      "torch": "2.5.1",
+      "transformers": "4.44.2"
+    },
+    "model_revision": "c731040fcd8d73dceaa04b0a8e6329b345b0f5df",
+    "device": "cpu",
+    "model_loaded_from": "local cache"
+  },
+  "scatter": [
+    {
+      "measured": 3.57922369165,
+      "predicted": 3.6922149658203125
+    },
+    {
+      "measured": 3.54468602792,
+      "predicted": 3.744401454925537
+    },
+    {
+      "measured": 3.58243554845,
+      "predicted": 3.686649799346924
+    },
+    {
+      "measured": 3.25965509969,
+      "predicted": 3.673762559890747
+    },
+    {
+      "measured": 1.30103154156,
+      "predicted": 3.7421815395355225
+    },
+    {
+      "measured": 1.56939573914,
+      "predicted": 3.6924197673797607
+    },
+    {
+      "measured": 3.7048189094,
+      "predicted": 3.696385383605957
+    },
+    {
+      "measured": 3.75751189025,
+      "predicted": 3.735089063644409
+    },
+    {
+      "measured": 3.59598766266,
+      "predicted": 3.6814870834350586
+    },
+    {
+      "measured": 3.45215245964,
+      "predicted": 3.715794086456299
+    },
+    {
+      "measured": 1.29977331616,
+      "predicted": 3.654210329055786
+    },
+    {
+      "measured": 1.30103000956,
+      "predicted": 3.702564239501953
+    },
+    {
+      "measured": 3.50577453767,
+      "predicted": 3.721243381500244
+    },
+    {
+      "measured": 3.68513988378,
+      "predicted": 3.691222667694092
+    },
+    {
+      "measured": 3.7535672978,
+      "predicted": 3.681704044342041
+    },
+    {
+      "measured": 1.48359643883,
+      "predicted": 3.737731695175171
+    },
+    {
+      "measured": 1.5860792823,
+      "predicted": 3.7138895988464355
+    },
+    {
+      "measured": 3.01980351572,
+      "predicted": 3.6803927421569824
+    },
+    {
+      "measured": 3.4926420282,
+      "predicted": 3.7037830352783203
+    },
+    {
+      "measured": 3.39402896007,
+      "predicted": 3.7049286365509033
+    }
+  ]
+}

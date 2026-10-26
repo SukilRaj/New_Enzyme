@@ -1,0 +1,115 @@
+"""Package only verified notebook workflows, source, data and model artifacts."""
+from datetime import datetime, timezone
+import hashlib
+import importlib.metadata
+import json
+from pathlib import Path
+import platform
+import zipfile
+
+import nbformat
+
+ROOT=Path(__file__).resolve().parents[1]
+BUNDLE=ROOT/'panel_notebooks'
+DEST=ROOT/'EnzAIme_Helix_Notebook_Package.zip'
+
+
+def main():
+    report=json.loads((ROOT/'reports/notebook_execution.json').read_text())
+    notebooks=sorted(BUNDLE.glob('*.ipynb'))
+    assert len(notebooks)==5
+    for path in notebooks:
+        result=report['notebooks'][path.name]
+        assert result['success'] and not result['errors'], (path.name,result)
+        assert result['code_cells']==result['executed_code_cells']
+        if result.get('source_sha256'):
+            assert hashlib.sha256(path.read_bytes()).hexdigest()==result['source_sha256'],path
+        nbformat.validate(nbformat.read(path,as_version=4))
+        compile(path.with_suffix('.py').read_text(encoding='utf-8'),str(path),'exec')
+    report['verification_scope']='Actual local Jupyter kernels; default combined demonstration, focused notebooks, full PET studies and ESM application execution. Kaggle account execution not performed.'
+    report['runtime']={'python':platform.python_version(),'platform':platform.platform(),
+        'packages':{n:importlib.metadata.version(n) for n in ('numpy','scipy','pandas','scikit-learn','torch','transformers','matplotlib','nbformat','nbclient','ipykernel')}}
+    selected_outputs=[]
+    for prefix,marker in [('pet-','summary.json'),('gfp-','summary.json'),('full_studies-','execution_status.json'),('data_preparation-','summary.json')]:
+        candidates=sorted(p for p in (BUNDLE/'outputs').glob(prefix+'*') if (p/marker).is_file())
+        assert candidates,prefix
+        selected_outputs.append(candidates[-1].name)
+    report['included_output_folders']=selected_outputs
+    (BUNDLE/'verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+
+    # Expand the inventory with separate encoder/task-head artifacts.
+    inventory=json.loads((BUNDLE/'model_inventory.json').read_text())
+    assert inventory
+    additions=[
+        ('Assay historical split model','models/assay_v2/train-20261024-160717/historical_model.pkl','Historical training-only fit; evaluate with historical_predictions.csv'),
+        ('GFP three-head ESM checkpoint','runs/20261024-093528-uncertainty-diversity/decoder.pt','Original saved execution-study split; full engine code in notebook 03'),
+        ('Frozen ESM-2 8M encoder / masked LM','models/esm2_8m/model.safetensors','Pretrained weights; GFP task predictions require a fitted head'),
+        ('Frozen ESM-2 35M encoder / masked LM','models/esm2_35m/model.safetensors','Pretrained weights used for PET features; not a fitted PET activity predictor')]
+    for name,relative,evaluation in additions:
+        if any(entry['bundled_path']==relative for entry in inventory):continue
+        path=BUNDLE/relative
+        if relative.startswith('models/esm2_'):
+            origin=json.loads((path.parent/'SOURCE.json').read_text())
+            original=ROOT/'models/huggingface/hub'/('models--'+origin['model'].replace('/','--'))/'snapshots'/origin['revision']/path.name
+        else:original=ROOT/relative
+        inventory.append({'model':name,'bundled_path':relative,'original_path':original.as_posix(),'evaluation':evaluation,'bytes':path.stat().st_size})
+    (BUNDLE/'model_inventory.json').write_text(json.dumps(inventory,indent=2)+'\n',encoding='utf-8')
+    location_table=['# Exact model and dataset locations','',
+        'All notebook-package paths below are relative to the extracted panel_notebooks folder. Original project paths are included for tracing existing application artifacts. New demonstration models live under the output directories printed by each notebook.','',
+        '| Model | Notebook-package file | Original project file | Evaluation scope |','|---|---|---|---|']
+    for item in inventory:
+        location_table.append(f"| {item['model']} | `{item['bundled_path']}` | `{item['original_path']}` | {item['evaluation']} |")
+    location_table+=['','## Datasets','',
+        '- PET confirmed assay data: `pet/data/processed/tpa_pet_ml_confirmed.csv` (221 source records; 208 eligible modeling rows).',
+        '- PET raw collected records: `pet/master_dataset.csv`; `pet/data/tpa_pet_ml_dataset.csv`; recorded exclusion review under `pet/reports/results/`.',
+        '- PET frozen residue features: `pet/data/neural_features/index.json` and its 25 NPZ files.',
+        '- Reference coordinates/images: `pet/data/structure_images/` (13 sequence-matched proteins).',
+        '- avGFP benchmark: `Directed_Evolution-main/preprocessed_data/avGFP/avGFP.csv` (51,715 sequences).',
+        '- Original PET dataset location: `D:/Final_Year_Project/EnzAIme_ML/data/processed/tpa_pet_ml_confirmed.csv`.','',
+        'Load each checkpoint with its accompanying preprocessing objects, architecture/normalization metadata and matching encoder. An encoder file is not the separately trained activity/fitness head. Notebook 01 evaluates PET artifacts; notebook 02 evaluates GFP artifacts.']
+    (BUNDLE/'MODEL_AND_DATA_LOCATIONS.md').write_text('\n'.join(location_table)+'\n',encoding='utf-8')
+    table=['# Local notebook execution verification','',
+           'Executed in fresh local Jupyter kernels on '+datetime.now().strftime('%Y-%m-%d')+'.',
+           'The combined panel demonstration uses modest training budgets. The full PET study flags were also enabled during notebook 03 verification.',
+           '', '| Notebook | Code cells completed | Plots | Seconds |', '|---|---:|---:|---:|']
+    for path in notebooks:
+        r=report['notebooks'][path.name]
+        table.append(f"| {path.name} | {r['executed_code_cells']}/{r['code_cells']} | {r['embedded_plots']} | {r['seconds']} |")
+    table+=['','The clean root notebook 03 keeps long-study flags off for a quick walkthrough. Its executed copy records the completed full run with flags enabled.',
+            'Kaggle input discovery and writable output paths are implemented; these results were produced locally, not in a Kaggle account.',
+            'Execution success verifies that the code runs; it does not establish high predictive performance or reproduction of the base paper.','',
+            '## Included completed output folders','']+[f'- `outputs/{name}`' for name in selected_outputs]
+    (BUNDLE/'VERIFICATION.md').write_text('\n'.join(table)+'\n',encoding='utf-8')
+
+    def include(path):
+        relative=path.relative_to(BUNDLE)
+        if any(p in ('__pycache__','.ipynb_checkpoints','.venv','.git') for p in relative.parts):return False
+        if path.suffix in ('.pyc','.log'):return False
+        if relative.parts[0]=='outputs':
+            if len(relative.parts)<3 or relative.parts[1] not in selected_outputs:return False
+            if 'huggingface' in relative.parts:return False  # Encoder already included once under models/.
+        return path.is_file() and path.name!='bundle_manifest.json'
+
+    paths=sorted(p for p in BUNDLE.rglob('*') if include(p))
+    manifest={'schema_version':1,'name':'EnzAIme Helix panel notebooks',
+              'created_at':datetime.now(timezone.utc).isoformat(),
+              'description':'Self-contained notebook demonstrations, full study source, data, offline weights and verified outputs; no frontend needed.',
+              'files':{p.relative_to(BUNDLE).as_posix():{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in paths}}
+    (BUNDLE/'bundle_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+    paths.append(BUNDLE/'bundle_manifest.json')
+    temporary=DEST.with_suffix('.partial.zip')
+    with zipfile.ZipFile(temporary,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6,allowZip64=True) as archive:
+        for path in paths:archive.write(path,Path('panel_notebooks')/path.relative_to(BUNDLE))
+    with zipfile.ZipFile(temporary) as archive:
+        assert archive.testzip() is None,'ZIP integrity failure'
+        for relative,entry in manifest['files'].items():
+            assert hashlib.sha256(archive.read('panel_notebooks/'+relative)).hexdigest()==entry['sha256'],relative
+        assert not any('/frontend/' in name for name in archive.namelist())
+    temporary.replace(DEST)
+    result={'path':str(DEST),'files':len(paths),'megabytes':round(DEST.stat().st_size/1e6,2),
+            'sha256':hashlib.sha256(DEST.read_bytes()).hexdigest(),'notebooks':len(notebooks),'verified':True}
+    (ROOT/'reports/notebook_package.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(result,indent=2))
+
+
+if __name__=='__main__':main()

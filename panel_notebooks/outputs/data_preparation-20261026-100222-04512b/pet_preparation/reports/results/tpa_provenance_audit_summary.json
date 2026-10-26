@@ -1,0 +1,66 @@
+{
+  "total_ml_records": 227,
+  "matched_records": 227,
+  "unmatched_records": 0,
+  "classification_counts": {
+    "TPA_CONFIRMED": 221,
+    "TPA_AMBIGUOUS": 6,
+    "NO_TPA_MATCH": 0,
+    "UNRESOLVED": 0
+  },
+  "unit_counts": {
+    "µM": 143,
+    "µmol/L": 45,
+    "mM": 27,
+    "µg/mL": 12
+  },
+  "analyte_counts": {
+    "TPA": 227,
+    "TPA + MHET + BHET (total aromatic products)": 1,
+    "BHET": 4,
+    "MHET": 2,
+    "di-aromatic oligomers": 1
+  },
+  "protein_counts": {
+    "HiC": 77,
+    "CalB": 22,
+    "606": 13,
+    "DIEGO": 12,
+    "Sis": 12,
+    "Sub1": 12,
+    "IsPETase": 12,
+    "MG8": 12,
+    "PHL-7": 8,
+    "BurPL": 8,
+    "RgPETase": 8,
+    "SM14est": 8,
+    "BhrPETase": 5,
+    "PET46": 3,
+    "PET93": 2,
+    "PET94": 2,
+    "PET12": 2,
+    "CtPl": 2,
+    "HG-3": 1,
+    "HG-4": 1,
+    "HG-5": 1,
+    "Dkca1": 1,
+    "Mors1": 1,
+    "TfCut2": 1,
+    "HG-2": 1
+  },
+  "source_counts": {
+    "pazy_polymer_assays.json.gz": 227
+  },
+  "exact_duplicate_groups": 6,
+  "exact_duplicate_rows": 13,
+  "repeated_condition_groups": 51,
+  "repeated_condition_rows": 153,
+  "zero_duration_rows": 10,
+  "conversion_status_counts": {
+    "converted": 221,
+    "not_converted_ambiguous_analyte": 6
+  },
+  "output_row_count": 227,
+  "source_record_id_available": false,
+  "measurement_index_available": false
+}

@@ -1,0 +1,13 @@
+{
+  "encoder": "facebook/esm2_t12_35M_UR50D",
+  "image_encoder": "ResNet18_Weights.IMAGENET1K_V1",
+  "proteins": {
+    "1": {
+      "file": "1.npz",
+      "sequence_sha256": "12c59fe9dab495ee536f1c2a5fc28c66e212192096c2351044d4dc139042f5af",
+      "sequence_length": 290,
+      "image_present": false
+    }
+  },
+  "scope": "single-protein demonstration"
+}

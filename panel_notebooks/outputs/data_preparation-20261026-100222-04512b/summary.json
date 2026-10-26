@@ -1,0 +1,12 @@
+{
+  "confirmed_rows": 221,
+  "all_columns_match": true,
+  "regenerated_proteins": [
+    "1"
+  ],
+  "encoder_source": {
+    "model": "facebook/esm2_t12_35M_UR50D",
+    "revision": "6fbf070e65b0b7291e7bbcd451118c216cff79d8"
+  },
+  "new_output_directory": "D:\\Enzyme_ML_new\\panel_notebooks\\outputs\\data_preparation-20261026-100222-04512b"
+}
