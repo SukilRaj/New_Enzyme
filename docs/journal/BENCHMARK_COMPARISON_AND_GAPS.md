@@ -38,7 +38,7 @@ These rows share five held-out protein groups. This historical test has already 
 
 ### Later assay-context study
 
-The separate 24-configuration study reports sequence + environment MAE 1404.64 µM and R² -0.0507 with sequence grouping, versus a training-median baseline MAE of 1600.46 µM on those same folds. With sequence-and-study grouping, its MAE is 1495.47 µM and R² -0.0729, versus median-baseline MAE 1585.40 µM and R² -0.0721. The stricter split therefore lowers MAE relative to that baseline while slightly worsening squared-error performance. Do not describe the model as better on every metric. These results evaluate fold-specific model selection, not the all-data refit as an independently tested checkpoint.
+The 26-configuration nested study reports both log1p-MAE-selected and raw-MSE-selected sequence + environment models. On sequence-grouped folds, log1p-MAE selection yields MAE 1404.64 µM, MSE 27,396,707 µM², RMSE 5234.19 µM and R² -0.0507; raw-MSE selection yields MAE 1452.01 µM, MSE 26,930,460 µM², RMSE 5189.46 µM and R² -0.0328. Thus the raw-MSE objective slightly lowers squared error but worsens MAE. On stricter sequence-and-study folds, log1p-MAE selection yields MAE 1495.47 µM, MSE 27,977,197 µM², RMSE 5289.35 µM and R² -0.0729; raw-MSE selection yields MAE 1356.88 µM, MSE 25,415,565 µM², RMSE 5041.39 µM and R² 0.0253. Each outer fold chooses its model using only inner folds. This is exploratory validation on the same 208-record dataset, not an external confirmation or evidence that the full-data refit is independently tested; the current live PET checkpoint was not replaced.
 
 ### GFP predictive evaluation
 

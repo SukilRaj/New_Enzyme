@@ -1,49 +1,74 @@
 {
-  "verified_at": "2026-10-26T10:36:37.401095",
-  "status": "all_passed",
   "notebooks": {
-    "00_Complete_Panel_Demonstration.ipynb": {
-      "code_cells": 31,
-      "executed": 31,
-      "errors": 0,
-      "scope": "Combined PET + GFP"
-    },
     "01_PET_Environment_Training_Evaluation.ipynb": {
+      "success": true,
+      "seconds": 56.13,
       "code_cells": 19,
-      "executed": 19,
-      "errors": 0,
-      "scope": "PET environmental analysis"
+      "executed_code_cells": 19,
+      "embedded_plots": 9,
+      "errors": []
     },
     "02_GFP_Benchmark_and_Directed_Evolution.ipynb": {
+      "success": true,
+      "seconds": 78.04,
       "code_cells": 12,
-      "executed": 12,
-      "errors": 0,
-      "scope": "GFP benchmark + evolution"
+      "executed_code_cells": 12,
+      "embedded_plots": 4,
+      "errors": []
+    },
+    "00_Complete_Panel_Demonstration.ipynb": {
+      "success": true,
+      "seconds": 77.04,
+      "source_sha256": "2d3876b7cc8b97d9a772ad7e72c4da0f20467fedf97b1e1a293bb8f6ad8203a2",
+      "full_studies_enabled": false,
+      "code_cells": 31,
+      "executed_code_cells": 31,
+      "embedded_plots": 13,
+      "errors": []
     },
     "03_Full_Training_and_Source_Code.ipynb": {
+      "success": true,
+      "seconds": 368.23,
+      "source_sha256": "04466949e3c9bf36cc3a0fc97a520a5955041b03c203e5ddb822af1858688033",
+      "full_studies_enabled": true,
       "code_cells": 8,
-      "executed": 8,
-      "errors": 0,
-      "scope": "Full training studies + source"
+      "executed_code_cells": 8,
+      "embedded_plots": 0,
+      "errors": []
     },
     "04_Data_Provenance_and_Feature_Preparation.ipynb": {
+      "success": true,
+      "seconds": 13.96,
+      "source_sha256": "d1bb1f37845c8b46b61eb2ae125ed9aded8521f713234a0a0d23328850b3e40b",
+      "full_studies_enabled": false,
       "code_cells": 8,
-      "executed": 8,
-      "errors": 0,
-      "scope": "Data provenance + ESM features"
+      "executed_code_cells": 8,
+      "embedded_plots": 1,
+      "errors": []
     }
   },
-  "output_directories": {
-    "data_preparation-20261026-100222-04512b": 3,
-    "full_studies-20261026-095614-3d4094": 2,
-    "gfp-20261026-094619-963340": 9,
-    "gfp-20261026-095123-9e1772": 14,
-    "gfp-20261026-095527-35beec": 14,
-    "pet-20261026-094524-968b0b": 23,
-    "pet-20261026-095457-f6eb7f": 23
+  "checked_at": "2026-10-26T04:32:34.907899+00:00",
+  "verification_scope": "Actual local Jupyter kernels; default combined demonstration, focused notebooks, full PET studies and ESM application execution. Kaggle account execution not performed.",
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.5.2",
+      "torch": "2.5.1",
+      "transformers": "4.44.2",
+      "matplotlib": "3.9.4",
+      "nbformat": "5.10.4",
+      "nbclient": "0.10.2",
+      "ipykernel": "6.29.5"
+    }
   },
-  "critical_artifacts_verified": 23,
-  "all_critical_files_present": true,
-  "python_version": "3.12",
-  "notes": "All 5 notebooks executed successfully in fresh kernels with zero errors. Executed copies with embedded outputs in executed/. Clean copies for fresh runs in root."
+  "included_output_folders": [
+    "pet-20261026-112832-f3dd13",
+    "gfp-20261026-113037-6e0f85",
+    "full_studies-20261026-113202-268a1b",
+    "data_preparation-20261026-100222-04512b"
+  ]
 }

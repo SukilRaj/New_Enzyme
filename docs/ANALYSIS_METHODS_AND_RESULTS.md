@@ -147,22 +147,55 @@ Local verification confirms that the implemented software and recorded calculati
 
 The integrated **Training laboratory** also exposes a separate, reproducible assay-context study. It parsed only structured, pre-assay fields from source records using an explicit whitelist; it did not use outcome text, free-form evidence, or study identifiers as predictive features. The available context variables are enzyme concentration (four unit forms), substrate concentration, reaction volume, PET crystallinity and agitation. Values retain their original unit dimensions, with categorical preparation/material metadata and missingness indicators. The report records coverage by feature. Because coverage is uneven and source studies use different protocols, missing assay conditions remain a major limitation.
 
-The search covered 24 prespecified combinations across context-only, sequence-plus-environment and sequence-plus-context representations, with ridge, ExtraTrees, histogram boosting, kernel ridge and a small seeded neural ensemble. The selection objective was mean absolute log1p error averaged equally over sequence groups. Preprocessing and PCA were fit inside training folds. Nested five-fold validation was run with sequence groups and with connected sequence/study groups; the latter prevents a shared sequence or study from crossing the outer train/evaluation boundary. The selected sequence-plus-environment recipe was then refit on all 208 records for artifact inspection. This final fit has no independent evaluation set and must not be treated as a validated deployment model.
+The updated search compares 26 prespecified configurations across context-only, sequence-plus-environment and sequence-plus-context representations, with ridge, ExtraTrees, histogram boosting, kernel ridge and a small seeded neural ensemble. Two additional sequence-plus-environment candidates fit the target directly in µM rather than log1p(µM), to test whether that target scale improves errors dominated by extreme concentrations. Nested evaluation reports two selection objectives: mean absolute log1p error averaged equally over sequence groups (the existing primary recipe selection), and raw squared error in µM, first averaged within each sequence group and then equally across groups. Both objectives select only on inner folds; their outer-fold predictions are compared separately. Preprocessing and PCA are fit inside training folds. Nested five-fold validation is run with sequence groups and with connected sequence/study groups; the latter prevents a shared sequence or study from crossing the outer train/evaluation boundary. The primary selected recipe is refit on all 208 records for artifact inspection. This final fit has no independent evaluation set and must not be treated as a validated deployment model.
 
-| Outer evaluation | MAE (µM) | RMSE (µM) | R² | Spearman | Within 2× on 1 + TPA |
-|---|---:|---:|---:|---:|---:|
-| Sequence-grouped, sequence + environment | 1,404.6 | 5,234.2 | −0.051 | 0.530 | 22.1% |
-| Sequence-and-study-grouped, sequence + environment | 1,495.5 | 5,289.3 | −0.073 | 0.319 | 16.8% |
-| Sequence-grouped training-median baseline | 1,600.5 | 5,278.9 | −0.069 | −0.611 | 10.6% |
+| Outer evaluation | Inner-fold selection objective | MAE (µM) | MSE (µM²) | RMSE (µM) | R² | Spearman | Within 2× on 1 + TPA |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Sequence-grouped, sequence + environment | Group-balanced log1p MAE | 1,404.6 | 27,396,707 | 5,234.2 | −0.051 | 0.530 | 22.1% |
+| Sequence-grouped, sequence + environment | Group-balanced raw MSE | 1,452.0 | 26,930,460 | 5,189.5 | −0.033 | 0.387 | 23.1% |
+| Sequence-grouped training-median baseline | Training median | 1,600.5 | 27,866,892 | 5,278.9 | −0.069 | −0.611 | 10.6% |
+| Sequence-and-study-grouped, sequence + environment | Group-balanced log1p MAE | 1,495.5 | 27,977,197 | 5,289.3 | −0.073 | 0.319 | 16.8% |
+| Sequence-and-study-grouped, sequence + environment | Group-balanced raw MSE | 1,356.9 | 25,415,565 | 5,041.4 | 0.025 | 0.617 | 25.5% |
+| Sequence-and-study-grouped training-median baseline | Training median | 1,585.4 | 27,955,678 | 5,287.3 | −0.072 | −0.494 | 9.1% |
 
-Here the 2× criterion is `abs(log1p(observed) - log1p(predicted)) <= log(2)`, using numeric µM values. It compares **1 + TPA**, not raw concentration; this distinction matters near zero. Each outer fold selects a model using its own inner folds. The final ExtraTrees refit is a separate artifact from these out-of-fold predictions.
+MSE is in squared concentration units (µM²). The 2× criterion is `abs(log1p(observed) - log1p(predicted)) <= log(2)`, using numeric µM values. It compares **1 + TPA**, not raw concentration; this distinction matters near zero. Each outer fold selects a model using only its own inner folds. The final ExtraTrees refit uses the log1p-MAE selection rule and is a separate artifact from these out-of-fold predictions.
 
-The grouped prediction MAE is modestly lower than the pooled training-median baseline, but R² is negative and the large RMSE/P90 errors reveal poor performance on extreme values. The stricter sequence-and-study holdout is also weak. Adding assay context did not win selection; it is shown as an ablation rather than advertised as an accuracy gain. A separately held historical 18-row test was involved in prior iteration and is not an untouched confirmation set; do not compare its scores against another model or the paper as if the evaluation were controlled. The model refit on all records is not promoted over the existing PET checkpoint.
+Compared with log1p-MAE selection, raw-MSE selection reduces sequence-grouped pooled MSE by 1.7% and RMSE by 0.9%, with R² moving from −0.051 to −0.033; MAE increases by 3.4%. Under the stricter sequence-and-study split, its MSE is 9.2% lower, RMSE 4.7% lower, MAE 9.3% lower, and R² moves from −0.073 to 0.025. These are exploratory nested cross-validation results on the same small dataset, not external validation; the sequence-grouped raw-MSE result still has negative R². The large RMSE/P90 errors reveal poor performance on extreme values. Adding assay context did not win selection; it is shown as an ablation rather than advertised as an accuracy gain. A separately held historical 18-row test was involved in prior iteration and is not an untouched confirmation set; do not compare its scores against another model or the paper as if the evaluation were controlled. Neither research model is promoted over the existing PET checkpoint.
 
-Artifacts are under `models/assay_v2/train-20261024-160717/`: `report.json`, `protocol.json`, `context_audit.json`, `splits.json`, sequence and sequence/study out-of-fold CSVs, and `status.json`. Recreate the planned study with:
+The latest run is identified by `models/assay_v2/latest.json`; its `report.json`, `protocol.json`, `context_audit.json`, `splits.json`, and sequence / sequence-study out-of-fold CSVs contain the reproducible evidence. Recreate the study with:
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\train_assay_models.py
 ```
 
+### Verification, data audit and baseline comparison
+
+The saved out-of-fold predictions were recomputed independently from the latest run's `sequence_oof.csv` and `sequence_and_study_oof.csv`. MAE, MSE, RMSE and R² reproduce the `report.json` values to 0.0 difference for every mode on both designs. Both split designs were re-checked for disjointness: no exact sequence and no study crosses an outer train/evaluation boundary, all 208 rows are covered once, and each design has 5 folds (the connected sequence-plus-study design collapses 25 sequences and 22 studies into 19 components). The modeled cohort rebuilds reproducibly: 221 confirmed rows → 213 after finite/positive-duration and nonnegative-target filters → 208 after exact duplicate removal.
+
+Target audit (208 rows): range 0.3–47,000 µM, median 234.5 µM, mean 1,556.0 µM, with 5 values above 10,000 µM. Units arrive in four forms and are standardized upstream: mM × 1000 (27 rows), µM × 1 (137), µmol/L × 1 (45) and µg/mL × 1000 / 166.13 using the TPA molecular weight (12). The µg/mL recomputation matched the stored standardized value to 1.1 × 10⁻¹³. Signed bias on the selected recipe is −1,316.7 µM (systematic underprediction), concentrated in the >1,000 µM group (MAE 4,962.8, bias −4,962.8) while the 0–10 µM group is overpredicted by +102.7 µM.
+
+Protein 37 (PHL-7) is the dominant error source: 8 records, median 17,000 µM, MAE 20,070.8 µM, spanning two studies (`10.1002/cssc.202101062`, `10.1021/acscatal.2c02275`). The existing targeted audit (`reports/results/ablation_error_analysis/targeted_audit/`) found the values internally consistent across dataset, JSON and provenance records but recorded as approximate digitized values from a figure; a transcription error could not be verified and the raw replicate/figure values were not retained. These records were therefore **left unchanged** — not capped, relabeled or removed — pending the original source values.
+
+A prespecified baseline comparison (`scripts/compare_assay_baselines.py`) reuses the frozen outer folds and evaluates training-fold mean/median constants, whole-cohort constants, and fixed-hyperparameter Huber/Ridge models on the same sequence-plus-environment features. It writes `baseline_comparison.json` / `.csv` beside the run artifacts (exposed through the training artifact allowlist).
+
+| Design | Model | MAE (µM) | RMSE (µM) | R² |
+|---|---|---:|---:|---:|
+| Sequence-grouped | Selected sequence + environment (log-error) | 1,404.6 | 5,234.2 | −0.051 |
+| Sequence-grouped | Raw-MSE-selected sequence + environment | 1,452.0 | 5,189.5 | −0.033 |
+| Sequence-grouped | Training-median baseline | 1,600.5 | 5,278.9 | −0.069 |
+| Sequence-grouped | Ridge (α=1000), fixed | 1,508.7 | 5,290.0 | −0.073 |
+| Sequence-grouped | Huber (ε=1.35, α=1.0), fixed | 2,026.6 | 5,821.0 | −0.299 |
+| Sequence-and-study-grouped | Raw-MSE-selected sequence + environment | 1,356.9 | 5,041.4 | 0.025 |
+| Sequence-and-study-grouped | Selected sequence + environment (log-error) | 1,495.5 | 5,289.3 | −0.073 |
+| Sequence-and-study-grouped | Training-median baseline | 1,585.4 | 5,287.3 | −0.072 |
+| Sequence-and-study-grouped | Ridge (α=1000), fixed | 1,499.3 | 5,285.3 | −0.073 |
+
+No candidate dominates: the log-error recipe gives the lowest sequence-grouped MAE, the raw-MSE recipe gives the lowest sequence-and-study MAE and is the only headline evaluation with nonnegative R², and the simple training-median baseline is within a few percent of both on MAE. Nothing here is promoted to serving.
+
+### Deployment status of the PET endpoint
+
+The live PET endpoint (`backend/app/api/neural.py` via `services/neural_recommender.py` in the EnzAIme backend) loads the original neural checkpoint at `models/neural/` (AttentionOracle, `image_trained: false`, 208 rows, `status: research_checkpoint_not_validated_for_mutation_effects`). It does **not** load this integrated assay_v2 model. The assay_v2 recipe remains a research artifact; promoting it would require a documented evaluation gate and explicit approval, which has not happened.
+
 This work improves the audit trail and comparison of plausible feature sets. It does not demonstrate high accuracy, prove that more training alone will fix the data limitations, validate a biological recommendation, or establish a novel scientific method.
+
+

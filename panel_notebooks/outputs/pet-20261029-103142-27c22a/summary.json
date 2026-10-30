@@ -1,0 +1,25 @@
+{
+  "notebook": "PET/environment",
+  "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
+  "source_rows": 221,
+  "eligible_rows": 208,
+  "original_checkpoint_test": {
+    "MAE": 46.78434620442043,
+    "RMSE": 53.45761007322514,
+    "R2": -2.2964550068290563,
+    "Spearman": -0.7094816166433606,
+    "n": 18
+  },
+  "demo_neural_test": {
+    "MAE": 38.84869100223848,
+    "RMSE": 43.412292539372125,
+    "R2": -1.1739698489251804,
+    "Spearman": 0.2765424695529595,
+    "n": 18
+  },
+  "demo_neural_epochs": 12,
+  "demo_best_epoch": 4,
+  "structure_sha256": "d3b86efb0089ce2afe608496429049c72c78fc128414f86c9ba4c032378bdb80",
+  "output_directory": "D:\\Enzyme_ML_new\\panel_notebooks\\outputs\\pet-20261029-103142-27c22a",
+  "mutant_fold_predicted": false
+}

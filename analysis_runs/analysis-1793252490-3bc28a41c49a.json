@@ -1,0 +1,988 @@
+{
+  "config": {
+    "protein_id": "1",
+    "engine": "legacy",
+    "temperature": 40.0,
+    "ph": 8.0,
+    "duration": 48.0,
+    "temperature_span": 5.0,
+    "ph_span": 0.5,
+    "duration_span": 12.0
+  },
+  "selected_protein": {
+    "protein_id": "1",
+    "protein_name": "IsPETase",
+    "center_prediction_um": 12.466173365241527,
+    "robust_score_um": 11.005600268144645,
+    "mean_prediction_um": 12.933219054145567,
+    "min_prediction_um": 9.991760938438205,
+    "max_prediction_um": 16.00942585591594,
+    "scenario_std_um": 1.6092778568201824,
+    "training_observations": 10,
+    "structure_used": false
+  },
+  "ranking": [
+    {
+      "protein_id": "37",
+      "protein_name": "PHL-7",
+      "center_prediction_um": 1497.4624442574782,
+      "robust_score_um": 1334.934873601035,
+      "mean_prediction_um": 1549.432929515557,
+      "min_prediction_um": 1222.1190451743548,
+      "max_prediction_um": 1891.7406471422,
+      "scenario_std_um": 179.07396994227398,
+      "training_observations": 8,
+      "structure_used": false
+    },
+    {
+      "protein_id": "41",
+      "protein_name": "PET46",
+      "center_prediction_um": 343.7937904144128,
+      "robust_score_um": 306.39640188546537,
+      "mean_prediction_um": 355.7520720042947,
+      "min_prediction_um": 280.43771859607523,
+      "max_prediction_um": 434.5165686671369,
+      "scenario_std_um": 41.20463576798135,
+      "training_observations": 2,
+      "structure_used": false
+    },
+    {
+      "protein_id": "44",
+      "protein_name": "HiC",
+      "center_prediction_um": 136.25822870748547,
+      "robust_score_um": 121.37081737450637,
+      "mean_prediction_um": 141.0186873031173,
+      "min_prediction_um": 111.03694445756545,
+      "max_prediction_um": 172.3739497473381,
+      "scenario_std_um": 16.40308133002464,
+      "training_observations": 69,
+      "structure_used": false
+    },
+    {
+      "protein_id": "177",
+      "protein_name": "Sub1",
+      "center_prediction_um": 115.09832328318225,
+      "robust_score_um": 102.50602382243406,
+      "mean_prediction_um": 119.1249411773632,
+      "min_prediction_um": 93.76518471628073,
+      "max_prediction_um": 145.6463282982196,
+      "scenario_std_um": 13.874342243120443,
+      "training_observations": 12,
+      "structure_used": false
+    },
+    {
+      "protein_id": "25",
+      "protein_name": "TfCut2",
+      "center_prediction_um": 62.59297533960662,
+      "robust_score_um": 55.69553042885569,
+      "mean_prediction_um": 64.79856438467831,
+      "min_prediction_um": 50.90776399444723,
+      "max_prediction_um": 79.3257146375472,
+      "scenario_std_um": 7.599689436680706,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "11",
+      "protein_name": "Mors1",
+      "center_prediction_um": 55.18336518354525,
+      "robust_score_um": 49.08957221930485,
+      "mean_prediction_um": 57.13195101446323,
+      "min_prediction_um": 44.85964808474508,
+      "max_prediction_um": 69.96643588476728,
+      "scenario_std_um": 6.714195920136318,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "149",
+      "protein_name": "606",
+      "center_prediction_um": 43.627726709082324,
+      "robust_score_um": 38.78727866724005,
+      "mean_prediction_um": 45.17552332357236,
+      "min_prediction_um": 35.4273543790835,
+      "max_prediction_um": 55.3702430558958,
+      "scenario_std_um": 5.333240230220371,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "17",
+      "protein_name": "BhrPETase",
+      "center_prediction_um": 38.025613514141405,
+      "robust_score_um": 33.79278633592497,
+      "mean_prediction_um": 39.37912342972154,
+      "min_prediction_um": 30.85464053644755,
+      "max_prediction_um": 48.29410494133494,
+      "scenario_std_um": 4.663761472005501,
+      "training_observations": 5,
+      "structure_used": false
+    },
+    {
+      "protein_id": "13",
+      "protein_name": "MG8",
+      "center_prediction_um": 34.67546255365688,
+      "robust_score_um": 30.80600970056991,
+      "mean_prediction_um": 35.91278779080156,
+      "min_prediction_um": 28.120088173687886,
+      "max_prediction_um": 44.062477566807146,
+      "scenario_std_um": 4.263403365019815,
+      "training_observations": 12,
+      "structure_used": false
+    },
+    {
+      "protein_id": "15",
+      "protein_name": "RgPETase",
+      "center_prediction_um": 33.72936996976822,
+      "robust_score_um": 29.962525380967584,
+      "mean_prediction_um": 34.93387588733991,
+      "min_prediction_um": 27.34783355919273,
+      "max_prediction_um": 42.867425869316676,
+      "scenario_std_um": 4.1503382710535535,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "195",
+      "protein_name": "BurPL",
+      "center_prediction_um": 30.511390778560738,
+      "robust_score_um": 27.093583910059696,
+      "mean_prediction_um": 31.60428692624302,
+      "min_prediction_um": 24.72115940447284,
+      "max_prediction_um": 38.802726056386554,
+      "scenario_std_um": 3.765772632832726,
+      "training_observations": 8,
+      "structure_used": false
+    },
+    {
+      "protein_id": "240",
+      "protein_name": "Dkca1",
+      "center_prediction_um": 25.115478409971104,
+      "robust_score_um": 22.282920588790567,
+      "mean_prediction_um": 26.021234092947445,
+      "min_prediction_um": 20.3167532965441,
+      "max_prediction_um": 31.98703913503892,
+      "scenario_std_um": 3.1209346391790818,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "481",
+      "protein_name": "Sis",
+      "center_prediction_um": 24.568530892147734,
+      "robust_score_um": 21.795296528307897,
+      "mean_prediction_um": 25.455313971997402,
+      "min_prediction_um": 19.87030253398285,
+      "max_prediction_um": 31.296169912526338,
+      "scenario_std_um": 3.0555716264306425,
+      "training_observations": 12,
+      "structure_used": false
+    },
+    {
+      "protein_id": "496",
+      "protein_name": "PET94",
+      "center_prediction_um": 24.188384880201006,
+      "robust_score_um": 21.456387569927706,
+      "mean_prediction_um": 25.061984755903786,
+      "min_prediction_um": 19.560008512402916,
+      "max_prediction_um": 30.816006766101303,
+      "scenario_std_um": 3.0101432942606112,
+      "training_observations": 2,
+      "structure_used": false
+    },
+    {
+      "protein_id": "483",
+      "protein_name": "DIEGO",
+      "center_prediction_um": 22.753391603209355,
+      "robust_score_um": 20.177032322747326,
+      "mean_prediction_um": 23.577221946240034,
+      "min_prediction_um": 18.388691233944463,
+      "max_prediction_um": 29.003434978461065,
+      "scenario_std_um": 2.8386543745941153,
+      "training_observations": 12,
+      "structure_used": false
+    },
+    {
+      "protein_id": "223",
+      "protein_name": "HG-2",
+      "center_prediction_um": 21.678779915008175,
+      "robust_score_um": 19.218976023437055,
+      "mean_prediction_um": 22.46533890704657,
+      "min_prediction_um": 17.51154893376443,
+      "max_prediction_um": 27.64606915666061,
+      "scenario_std_um": 2.7102314316065597,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "495",
+      "protein_name": "PET93",
+      "center_prediction_um": 21.365212806880326,
+      "robust_score_um": 18.93942403468655,
+      "mean_prediction_um": 22.140899205909818,
+      "min_prediction_um": 17.255595500789916,
+      "max_prediction_um": 27.25000233342751,
+      "scenario_std_um": 2.672759470440132,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "224",
+      "protein_name": "HG-3",
+      "center_prediction_um": 18.771999258952867,
+      "robust_score_um": 16.627470351689023,
+      "mean_prediction_um": 19.45774025051349,
+      "min_prediction_um": 15.138882190525607,
+      "max_prediction_um": 23.97444418183575,
+      "scenario_std_um": 2.3628552372318383,
+      "training_observations": 1,
+      "structure_used": false
+    },
+    {
+      "protein_id": "148",
+      "protein_name": "CtPl",
+      "center_prediction_um": 13.541390381224755,
+      "robust_score_um": 11.964193605882205,
+      "mean_prediction_um": 14.045726640029171,
+      "min_prediction_um": 10.869403752646209,
+      "max_prediction_um": 17.367556604447103,
+      "scenario_std_um": 1.7377717129635666,
+      "training_observations": 2,
+      "structure_used": false
+    },
+    {
+      "protein_id": "1",
+      "protein_name": "IsPETase",
+      "center_prediction_um": 12.466173365241527,
+      "robust_score_um": 11.005600268144645,
+      "mean_prediction_um": 12.933219054145567,
+      "min_prediction_um": 9.991760938438205,
+      "max_prediction_um": 16.00942585591594,
+      "scenario_std_um": 1.6092778568201824,
+      "training_observations": 10,
+      "structure_used": false
+    },
+    {
+      "protein_id": "225",
+      "protein_name": "HG-4",
+      "center_prediction_um": 9.384114588228753,
+      "robust_score_um": 8.257824480455275,
+      "mean_prediction_um": 9.744261886054483,
+      "min_prediction_um": 7.476029143717241,
+      "max_prediction_um": 12.116405103796428,
+      "scenario_std_um": 1.24095522169745,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "226",
+      "protein_name": "HG-5",
+      "center_prediction_um": 6.4255140390950665,
+      "robust_score_um": 5.620121537261724,
+      "mean_prediction_um": 6.683049604060951,
+      "min_prediction_um": 5.061071250889575,
+      "max_prediction_um": 8.379331228789114,
+      "scenario_std_um": 0.8873874804504879,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "4",
+      "protein_name": "PET12",
+      "center_prediction_um": 3.3978496203576602,
+      "robust_score_um": 2.997056767591466,
+      "mean_prediction_um": 3.5637739360278,
+      "min_prediction_um": 2.6714478888739075,
+      "max_prediction_um": 4.51337941004822,
+      "scenario_std_um": 0.4848669714713405,
+      "training_observations": 2,
+      "structure_used": false
+    },
+    {
+      "protein_id": "185",
+      "protein_name": "SM14est",
+      "center_prediction_um": 2.7770660994667327,
+      "robust_score_um": 2.432263313292476,
+      "mean_prediction_um": 2.919892137881211,
+      "min_prediction_um": 2.146026842901051,
+      "max_prediction_um": 3.737261100165126,
+      "scenario_std_um": 0.4177888224363256,
+      "training_observations": 0,
+      "structure_used": false
+    },
+    {
+      "protein_id": "42",
+      "protein_name": "CalB",
+      "center_prediction_um": 2.2103008959334627,
+      "robust_score_um": 1.9183992922470054,
+      "mean_prediction_um": 2.3344896886590925,
+      "min_prediction_um": 1.6816328372291864,
+      "max_prediction_um": 3.0336880085677125,
+      "scenario_std_um": 0.3570068174706841,
+      "training_observations": 15,
+      "structure_used": false
+    }
+  ],
+  "surface": [
+    {
+      "temperature": 35.0,
+      "ph": 7.5,
+      "predicted_tpa_um": 14.337834198164403,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5196600567863996
+    },
+    {
+      "temperature": 35.0,
+      "ph": 7.666666666666667,
+      "predicted_tpa_um": 13.472337448676743,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5741531492881928
+    },
+    {
+      "temperature": 35.0,
+      "ph": 7.833333333333333,
+      "predicted_tpa_um": 12.82713119151925,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.4728657052142208
+    },
+    {
+      "temperature": 35.0,
+      "ph": 8.0,
+      "predicted_tpa_um": 12.192701414229655,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.4049650737402382
+    },
+    {
+      "temperature": 35.0,
+      "ph": 8.166666666666666,
+      "predicted_tpa_um": 11.462354610992525,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.4728657052142201
+    },
+    {
+      "temperature": 35.0,
+      "ph": 8.333333333333334,
+      "predicted_tpa_um": 11.043586827361189,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.6343640656773204
+    },
+    {
+      "temperature": 35.0,
+      "ph": 8.5,
+      "predicted_tpa_um": 10.627591171808897,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.7460837941271208
+    },
+    {
+      "temperature": 36.666666666666664,
+      "ph": 7.5,
+      "predicted_tpa_um": 14.333099341246783,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5004136883061477
+    },
+    {
+      "temperature": 36.666666666666664,
+      "ph": 7.666666666666667,
+      "predicted_tpa_um": 13.587719910725488,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5567936095740218
+    },
+    {
+      "temperature": 36.666666666666664,
+      "ph": 7.833333333333333,
+      "predicted_tpa_um": 12.862936177680865,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.39177178976635946
+    },
+    {
+      "temperature": 36.666666666666664,
+      "ph": 8.0,
+      "predicted_tpa_um": 12.210267492860227,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.30639822296878744
+    },
+    {
+      "temperature": 36.666666666666664,
+      "ph": 8.166666666666666,
+      "predicted_tpa_um": 11.638668531290337,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.3917717897663587
+    },
+    {
+      "temperature": 36.666666666666664,
+      "ph": 8.333333333333334,
+      "predicted_tpa_um": 11.192239660133925,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5764554864962723
+    },
+    {
+      "temperature": 36.666666666666664,
+      "ph": 8.5,
+      "predicted_tpa_um": 10.82441198080621,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.7328085102426406
+    },
+    {
+      "temperature": 38.333333333333336,
+      "ph": 7.5,
+      "predicted_tpa_um": 14.43057995095293,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5087512950681139
+    },
+    {
+      "temperature": 38.333333333333336,
+      "ph": 7.666666666666667,
+      "predicted_tpa_um": 13.702760271223799,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5387307527560025
+    },
+    {
+      "temperature": 38.333333333333336,
+      "ph": 7.833333333333333,
+      "predicted_tpa_um": 12.897276509248787,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.33378890231721753
+    },
+    {
+      "temperature": 38.333333333333336,
+      "ph": 8.0,
+      "predicted_tpa_um": 12.272529642049383,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.22761758959234057
+    },
+    {
+      "temperature": 38.333333333333336,
+      "ph": 8.166666666666666,
+      "predicted_tpa_um": 11.79736026309679,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.33378890231721653
+    },
+    {
+      "temperature": 38.333333333333336,
+      "ph": 8.333333333333334,
+      "predicted_tpa_um": 11.38187466427775,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5387307527560037
+    },
+    {
+      "temperature": 38.333333333333336,
+      "ph": 8.5,
+      "predicted_tpa_um": 11.04700716804891,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.7385271379396692
+    },
+    {
+      "temperature": 40.0,
+      "ph": 7.5,
+      "predicted_tpa_um": 14.64826443406179,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5434046714808459
+    },
+    {
+      "temperature": 40.0,
+      "ph": 7.666666666666667,
+      "predicted_tpa_um": 13.850472217400176,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5255544272317073
+    },
+    {
+      "temperature": 40.0,
+      "ph": 7.833333333333333,
+      "predicted_tpa_um": 13.05658826852398,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.3120763741905688
+    },
+    {
+      "temperature": 40.0,
+      "ph": 8.0,
+      "predicted_tpa_um": 12.466173365241527,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.1943872400895339
+    },
+    {
+      "temperature": 40.0,
+      "ph": 8.166666666666666,
+      "predicted_tpa_um": 12.006769858236597,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.3120763741905677
+    },
+    {
+      "temperature": 40.0,
+      "ph": 8.333333333333334,
+      "predicted_tpa_um": 11.616853056790552,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5255544272317085
+    },
+    {
+      "temperature": 40.0,
+      "ph": 8.5,
+      "predicted_tpa_um": 11.296700666871866,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.7511383454765785
+    },
+    {
+      "temperature": 41.666666666666664,
+      "ph": 7.5,
+      "predicted_tpa_um": 14.86587611538682,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5998300840282448
+    },
+    {
+      "temperature": 41.666666666666664,
+      "ph": 7.666666666666667,
+      "predicted_tpa_um": 14.001667387106762,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5387307527560026
+    },
+    {
+      "temperature": 41.666666666666664,
+      "ph": 7.833333333333333,
+      "predicted_tpa_um": 13.2936251262414,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.33378890231721753
+    },
+    {
+      "temperature": 41.666666666666664,
+      "ph": 8.0,
+      "predicted_tpa_um": 12.664030048811012,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.22761758959234063
+    },
+    {
+      "temperature": 41.666666666666664,
+      "ph": 8.166666666666666,
+      "predicted_tpa_um": 12.231086812238843,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.3337889023172166
+    },
+    {
+      "temperature": 41.666666666666664,
+      "ph": 8.333333333333334,
+      "predicted_tpa_um": 11.878354452974301,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5387307527560037
+    },
+    {
+      "temperature": 41.666666666666664,
+      "ph": 8.5,
+      "predicted_tpa_um": 11.55133904047724,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.7604157954878982
+    },
+    {
+      "temperature": 43.333333333333336,
+      "ph": 7.5,
+      "predicted_tpa_um": 15.086510165607415,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.672569965422081
+    },
+    {
+      "temperature": 43.333333333333336,
+      "ph": 7.666666666666667,
+      "predicted_tpa_um": 14.32144941116091,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5764554864962712
+    },
+    {
+      "temperature": 43.333333333333336,
+      "ph": 7.833333333333333,
+      "predicted_tpa_um": 13.502515661806635,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.39177178976635957
+    },
+    {
+      "temperature": 43.333333333333336,
+      "ph": 8.0,
+      "predicted_tpa_um": 12.894523372420112,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.30639822296878755
+    },
+    {
+      "temperature": 43.333333333333336,
+      "ph": 8.166666666666666,
+      "predicted_tpa_um": 12.48752140183907,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.39177178976635874
+    },
+    {
+      "temperature": 43.333333333333336,
+      "ph": 8.333333333333334,
+      "predicted_tpa_um": 12.14527582035834,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.5764554864962723
+    },
+    {
+      "temperature": 43.333333333333336,
+      "ph": 8.5,
+      "predicted_tpa_um": 11.807643644263957,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.7875927157954781
+    },
+    {
+      "temperature": 45.0,
+      "ph": 7.5,
+      "predicted_tpa_um": 15.382409098719297,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.6132399502353746
+    },
+    {
+      "temperature": 45.0,
+      "ph": 7.666666666666667,
+      "predicted_tpa_um": 14.650991913559245,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.6264126473767702
+    },
+    {
+      "temperature": 45.0,
+      "ph": 7.833333333333333,
+      "predicted_tpa_um": 13.893652647113337,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.4621439301112347
+    },
+    {
+      "temperature": 45.0,
+      "ph": 8.0,
+      "predicted_tpa_um": 13.165102834996455,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.39239233927327377
+    },
+    {
+      "temperature": 45.0,
+      "ph": 8.166666666666666,
+      "predicted_tpa_um": 12.73434009541028,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.462143930111234
+    },
+    {
+      "temperature": 45.0,
+      "ph": 8.333333333333334,
+      "predicted_tpa_um": 12.409360229221477,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.6264126473767713
+    },
+    {
+      "temperature": 45.0,
+      "ph": 8.5,
+      "predicted_tpa_um": 12.069587193839626,
+      "outside_training_range": false,
+      "nearest_training_distance": 0.8309146321284168
+    }
+  ],
+  "sweeps": {
+    "temperature": [
+      {
+        "value": 35.0,
+        "predicted_tpa_um": 12.192701414229655,
+        "outside_training_range": false
+      },
+      {
+        "value": 35.833333333333336,
+        "predicted_tpa_um": 12.202609951091205,
+        "outside_training_range": false
+      },
+      {
+        "value": 36.666666666666664,
+        "predicted_tpa_um": 12.210267492860227,
+        "outside_training_range": false
+      },
+      {
+        "value": 37.5,
+        "predicted_tpa_um": 12.218774078193297,
+        "outside_training_range": false
+      },
+      {
+        "value": 38.333333333333336,
+        "predicted_tpa_um": 12.272529642049383,
+        "outside_training_range": false
+      },
+      {
+        "value": 39.166666666666664,
+        "predicted_tpa_um": 12.347102170787153,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 12.466173365241527,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.833333333333336,
+        "predicted_tpa_um": 12.558122407736022,
+        "outside_training_range": false
+      },
+      {
+        "value": 41.666666666666664,
+        "predicted_tpa_um": 12.664030048811012,
+        "outside_training_range": false
+      },
+      {
+        "value": 42.5,
+        "predicted_tpa_um": 12.783187660513619,
+        "outside_training_range": false
+      },
+      {
+        "value": 43.333333333333336,
+        "predicted_tpa_um": 12.894523372420112,
+        "outside_training_range": false
+      },
+      {
+        "value": 44.16666666666667,
+        "predicted_tpa_um": 13.029160787929998,
+        "outside_training_range": false
+      },
+      {
+        "value": 45.0,
+        "predicted_tpa_um": 13.165102834996455,
+        "outside_training_range": false
+      }
+    ],
+    "ph": [
+      {
+        "value": 7.5,
+        "predicted_tpa_um": 14.64826443406179,
+        "outside_training_range": false
+      },
+      {
+        "value": 7.583333333333333,
+        "predicted_tpa_um": 14.254561141429122,
+        "outside_training_range": false
+      },
+      {
+        "value": 7.666666666666667,
+        "predicted_tpa_um": 13.850472217400176,
+        "outside_training_range": false
+      },
+      {
+        "value": 7.75,
+        "predicted_tpa_um": 13.436083944683224,
+        "outside_training_range": false
+      },
+      {
+        "value": 7.833333333333333,
+        "predicted_tpa_um": 13.05658826852398,
+        "outside_training_range": false
+      },
+      {
+        "value": 7.916666666666667,
+        "predicted_tpa_um": 12.732869913792262,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.0,
+        "predicted_tpa_um": 12.466173365241527,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.083333333333334,
+        "predicted_tpa_um": 12.217141649507925,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.166666666666666,
+        "predicted_tpa_um": 12.006769858236597,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.25,
+        "predicted_tpa_um": 11.799441301885212,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.333333333333334,
+        "predicted_tpa_um": 11.616853056790552,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.416666666666666,
+        "predicted_tpa_um": 11.455745317645995,
+        "outside_training_range": false
+      },
+      {
+        "value": 8.5,
+        "predicted_tpa_um": 11.296700666871866,
+        "outside_training_range": false
+      }
+    ],
+    "duration": [
+      {
+        "value": 36.0,
+        "predicted_tpa_um": 11.80719477584057,
+        "outside_training_range": false
+      },
+      {
+        "value": 38.0,
+        "predicted_tpa_um": 11.90474424352159,
+        "outside_training_range": false
+      },
+      {
+        "value": 40.0,
+        "predicted_tpa_um": 12.003036723143273,
+        "outside_training_range": false
+      },
+      {
+        "value": 42.0,
+        "predicted_tpa_um": 12.105989428873027,
+        "outside_training_range": false
+      },
+      {
+        "value": 44.0,
+        "predicted_tpa_um": 12.224965272624608,
+        "outside_training_range": false
+      },
+      {
+        "value": 46.0,
+        "predicted_tpa_um": 12.345027539509106,
+        "outside_training_range": false
+      },
+      {
+        "value": 48.0,
+        "predicted_tpa_um": 12.466173365241527,
+        "outside_training_range": false
+      },
+      {
+        "value": 50.0,
+        "predicted_tpa_um": 12.582397623301002,
+        "outside_training_range": false
+      },
+      {
+        "value": 52.0,
+        "predicted_tpa_um": 12.700673498023688,
+        "outside_training_range": false
+      },
+      {
+        "value": 54.0,
+        "predicted_tpa_um": 12.838733653670229,
+        "outside_training_range": false
+      },
+      {
+        "value": 56.0,
+        "predicted_tpa_um": 12.978185026075558,
+        "outside_training_range": false
+      },
+      {
+        "value": 58.0,
+        "predicted_tpa_um": 13.119045000617717,
+        "outside_training_range": false
+      },
+      {
+        "value": 60.0,
+        "predicted_tpa_um": 13.261314238812348,
+        "outside_training_range": false
+      }
+    ]
+  },
+  "observed_evidence": [
+    {
+      "temperature": 30.0,
+      "ph": 9.0,
+      "duration": 24.0,
+      "measured_tpa_um": 1.3,
+      "used_in_training": true
+    },
+    {
+      "temperature": 30.0,
+      "ph": 9.0,
+      "duration": 72.0,
+      "measured_tpa_um": 2.4,
+      "used_in_training": true
+    },
+    {
+      "temperature": 40.0,
+      "ph": 9.0,
+      "duration": 24.0,
+      "measured_tpa_um": 2.1,
+      "used_in_training": true
+    },
+    {
+      "temperature": 40.0,
+      "ph": 9.0,
+      "duration": 72.0,
+      "measured_tpa_um": 3.3,
+      "used_in_training": true
+    },
+    {
+      "temperature": 30.0,
+      "ph": 7.0,
+      "duration": 18.0,
+      "measured_tpa_um": 58.0,
+      "used_in_training": true
+    },
+    {
+      "temperature": 30.0,
+      "ph": 9.0,
+      "duration": 18.0,
+      "measured_tpa_um": 4.0,
+      "used_in_training": true
+    },
+    {
+      "temperature": 30.0,
+      "ph": 9.0,
+      "duration": 18.0,
+      "measured_tpa_um": 85.0,
+      "used_in_training": true
+    },
+    {
+      "temperature": 30.0,
+      "ph": 9.0,
+      "duration": 18.0,
+      "measured_tpa_um": 521.0,
+      "used_in_training": true
+    },
+    {
+      "temperature": 30.0,
+      "ph": 9.0,
+      "duration": 18.0,
+      "measured_tpa_um": 682.0,
+      "used_in_training": true
+    },
+    {
+      "temperature": 30.0,
+      "ph": 9.0,
+      "duration": 18.0,
+      "measured_tpa_um": 407.0,
+      "used_in_training": true
+    }
+  ],
+  "best_grid_point": {
+    "temperature": 45.0,
+    "ph": 7.5,
+    "predicted_tpa_um": 15.382409098719297,
+    "outside_training_range": false,
+    "nearest_training_distance": 0.6132399502353746
+  },
+  "scenario_count": 27,
+  "outside_training_range_fraction": 0.0,
+  "nearest_training_distance_max": 0.8309146321284168,
+  "training_condition_ranges": {
+    "temperature": [
+      30.0,
+      80.0
+    ],
+    "ph": [
+      7.0,
+      9.0
+    ],
+    "duration": [
+      1.0,
+      672.0
+    ]
+  },
+  "model": {
+    "mode": "legacy_attention1d"
+  },
+  "model_sha256": "6f5b1a9a038ebb18a052b59ab886c2f3876a2557af80251f2c0f819ba07784f5",
+  "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
+  "score_definition": "10th percentile of predicted TPA over the discrete condition grid; not a biological measurement or calibrated lower confidence bound.",
+  "limitations": [
+    "Environmental sweeps are model sensitivity, not causal effects.",
+    "Highest grid score is a hypothesis, not a verified optimum.",
+    "GFP dataset has no condition labels; these PET effects are not applied to GFP.",
+    "No reliable mutation-effect estimates are inferred from catalog-protein ranking."
+  ],
+  "id": "analysis-1793252490-3bc28a41c49a",
+  "created": 1793252490.7954605,
+  "status": "completed",
+  "domain": "PET environment",
+  "unit": "\u00b5M TPA",
+  "artifact_url": "/api/analysis/runs/analysis-1793252490-3bc28a41c49a"
+}

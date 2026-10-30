@@ -51,6 +51,7 @@ def main():
         coverage={k:int(np.isfinite(data['context'][:,i]).sum()) for i,k in enumerate(CONTEXT_NAMES)}
         protocol={'schema_version':2,'run_id':run_id,'created':time.time(),'candidates':candidates,
                   'selection_metric':'mean absolute log1p error, averaged equally over sequence groups',
+                  'selection_metric_mse':'raw squared error in µM, averaged within sequence groups and equally across groups',
                   'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT/'lab/assay_model.py',Path(__file__),ROOT/'lab/condition_model.py')},
                   'dataset_sha256':data['dataset_sha256'],'context_fields':CONTEXT_NAMES,'context_coverage':coverage,
                   'historical_split':old_protocol['split'],'sequence_groups':data['groups'].tolist(),'studies':data['studies'].tolist(),
@@ -87,9 +88,12 @@ def main():
         for design_index,(design,groups,nfolds) in enumerate(designs):
             predictions={mode:np.full(len(groups),np.nan) for mode in chosen}
             predictions['training_median']=np.full(len(groups),np.nan)
+            predictions['sequence_environment_mse']=np.full(len(groups),np.nan)
             splits=[];candidate_errors={i:[] for i in range(len(candidates))}
             for fold,(a,b) in enumerate(GroupKFold(nfolds).split(data['env'],groups=groups),1):
-                inner_scores={i:[] for i in range(len(candidates))};inners=[]
+                inner_scores={i:[] for i in range(len(candidates))}
+                inner_mse_scores={i:[] for i in range(len(candidates))}
+                inners=[]
                 inner_n=min(3,len(np.unique(groups[a])))
                 for inner,(c,d) in enumerate(GroupKFold(inner_n).split(a,groups=groups[a]),1):
                     c,d=a[c],a[d];inners.append({'train':c.tolist(),'validation':d.tolist()})
@@ -97,7 +101,11 @@ def main():
                         _,p=fit_predict(data,spec,c,d)
                         # One loss per sequence, so repeated assays cannot dominate selection.
                         error=np.abs(np.log1p(p)-np.log1p(data['target'][d]))
-                        for g in np.unique(data['groups'][d]):inner_scores[index].append(float(error[data['groups'][d]==g].mean()))
+                        squared_error=(p-data['target'][d])**2
+                        for g in np.unique(data['groups'][d]):
+                            mask=data['groups'][d]==g
+                            inner_scores[index].append(float(error[mask].mean()))
+                            inner_mse_scores[index].append(float(squared_error[mask].mean()))
                     progress=16+(design_index+(fold-1+inner/inner_n)/nfolds)/len(designs)*72
                     update('Nested validation',progress,f'{design} · outer {fold}/{nfolds} · inner {inner}/{inner_n}')
                 selections={}
@@ -105,6 +113,12 @@ def main():
                     best=min((i for i,s in enumerate(candidates) if s['mode']==mode),key=lambda i:np.mean(inner_scores[i]))
                     _,pred=fit_predict(data,candidates[best],a,b)
                     predictions[mode][b]=pred;selections[mode]=candidates[best]
+                mse_best=min((i for i,s in enumerate(candidates) if s['mode']=='sequence_environment'),
+                             key=lambda i:np.mean(inner_mse_scores[i]))
+                mse_spec=candidates[mse_best]
+                _,mse_pred=fit_predict(data,mse_spec,a,b)
+                predictions['sequence_environment_mse'][b]=mse_pred
+                selections['sequence_environment_mse']=mse_spec
                 predictions['training_median'][b]=np.median(data['target'][a])
                 for i,values in inner_scores.items():candidate_errors[i].extend(values)
                 splits.append({'fold':fold,'train':a.tolist(),'test':b.tolist(),'inner_splits':inners,'selection':selections})
@@ -132,7 +146,9 @@ def main():
                 'model_sha256':hashlib.sha256((folder/'model.pkl').read_bytes()).hexdigest(),
                 'production_spec':best_spec,'production_training_rows':len(ids),'historical_selection':selection_fixed,
                 'fixed_test':fixed,'evaluation':evaluations,'context_coverage':coverage,
-                'selection_metric':protocol['selection_metric'],'neural_ensemble_seeds':[42,43,44],
+                'selection_metric':protocol['selection_metric'],
+                'selection_metric_mse':'Mean squared µM error, averaged equally over sequence groups in inner folds',
+                'neural_ensemble_seeds':[42,43,44],
                 'prespecified_configurations':len(candidates),'limitations':protocol['notes']+
                 ['Assay context may be confounded with study; connected sequence/study grouping is reported separately.',
                  'No categorical accuracy score is claimed for this regression task.',

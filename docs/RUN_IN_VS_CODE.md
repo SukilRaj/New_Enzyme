@@ -36,7 +36,7 @@ For the VS Code menu workflow, choose **Terminal → Run Task → Start integrat
 | Protein images | Choose a protein with an available structure and generate views | Front, side, top, distance map, proximity map and ZIP |
 | Sequence and structure | Import a variant FASTA or preview substitutions, then inspect edits on the reference | Residue mapping, rotatable coordinates, coverage and reference PDB download |
 | Directed evolution | Run a CPU baseline with a modest sample budget | Training progress, held-out errors, search history and candidates |
-| Training laboratory | Inspect the completed assay study | 24-configuration protocol, grouped errors and downloadable evidence |
+| Training laboratory | Inspect the completed assay study | 26-configuration protocol, grouped errors and downloadable evidence |
 | Model comparison | Read the comparison tables with their cohort labels | Separate fixed-test and grouped results |
 | Experiment registry | Reopen a run and export its record | Configuration, units, hashes and saved outputs |
 

@@ -98,8 +98,11 @@ def dataset():
 
 
 class AssayRegressor:
-    def __init__(self,mode='sequence_context',kind='extra',strength=4,seed=42):
+    def __init__(self,mode='sequence_context',kind='extra',strength=4,seed=42,target_transform='log1p'):
+        if target_transform not in ('log1p','raw'):
+            raise ValueError('target_transform must be log1p or raw.')
         self.mode,self.kind,self.strength,self.seed=mode,kind,strength,seed
+        self.target_transform=target_transform
 
     def features(self,seq,env,context):
         parts=[environmental_features(env)]
@@ -116,7 +119,8 @@ class AssayRegressor:
         x=self.features(seq,env,context)
         self.imputer=SimpleImputer(strategy='median',add_indicator=True,keep_empty_features=True).fit(x)
         self.scaler=StandardScaler().fit(self.imputer.transform(x))
-        x=self.scaler.transform(self.imputer.transform(x)); target=np.log1p(y)
+        x=self.scaler.transform(self.imputer.transform(x))
+        target=np.log1p(y) if self.target_transform=='log1p' else y
         if self.kind=='extra':model=ExtraTreesRegressor(n_estimators=240,min_samples_leaf=self.strength,max_features=.85,random_state=self.seed,n_jobs=1)
         elif self.kind=='boost':model=HistGradientBoostingRegressor(max_iter=300,learning_rate=.035,max_leaf_nodes=7,min_samples_leaf=8,l2_regularization=self.strength,early_stopping=False,random_state=self.seed)
         elif self.kind=='ridge':model=Ridge(alpha=self.strength)
@@ -137,13 +141,21 @@ class AssayRegressor:
     def predict(self,seq,env,context):
         x=self.scaler.transform(self.imputer.transform(self.features(seq,env,context)))
         predictions=np.array([m.predict(x) for m in self.models]).mean(0)
-        return np.expm1(np.clip(predictions,0,20))
+        if getattr(self,'target_transform','log1p')=='log1p':
+            return np.expm1(np.clip(predictions,0,20))
+        return np.maximum(predictions,0)
 
 
 def specs():
     # A frozen experiment, not an adaptive search against held-out scores.
     choices=[('ridge',100),('ridge',1000),('extra',2),('extra',6),('boost',10),('kernel',1),('kernel',10),('neural',1)]
-    return [dict(mode=mode,kind=kind,strength=strength,seed=42) for mode in ('sequence_environment','context','sequence_context') for kind,strength in choices]
+    candidates=[dict(mode=mode,kind=kind,strength=strength,seed=42)
+                for mode in ('sequence_environment','context','sequence_context') for kind,strength in choices]
+    candidates.extend([
+        dict(mode='sequence_environment',kind='extra',strength=2,seed=42,target_transform='raw'),
+        dict(mode='sequence_environment',kind='boost',strength=10,seed=42,target_transform='raw'),
+    ])
+    return candidates
 
 
 def fit_predict(data,spec,train,test):

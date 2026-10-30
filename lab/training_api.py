@@ -48,6 +48,7 @@ def predictions():
         rows=list(csv.DictReader(stream))
     return jsonify(rows=[{'protein_id':r['protein_id'],'observed_um':float(r['observed_um']),
                           'sequence_environment_um':float(r['sequence_environment']),
+                          'sequence_environment_mse_um':float(r.get('sequence_environment_mse') or r['sequence_environment']),
                           'sequence_context_um':float(r['sequence_context'])} for r in rows])
 
 
@@ -63,6 +64,7 @@ def features():
 def artifact(run_id,name):
     if not re.fullmatch(r'train-\d{8}-\d{6}',run_id) or name not in (
         'report.json','protocol.json','context_audit.json','splits.json','sequence_oof.csv',
-        'sequence_and_study_oof.csv','historical_predictions.csv','status.json'):
+        'sequence_and_study_oof.csv','historical_predictions.csv','status.json',
+        'baseline_comparison.json','baseline_comparison.csv'):
         return jsonify(error='Unknown training artifact'),404
     return send_from_directory(BASE/run_id,name,as_attachment=True)

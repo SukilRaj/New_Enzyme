@@ -112,7 +112,9 @@ class ConditionRegressor:
 
 
 def metrics(y, pred):
-    return {'mae_um': float(mean_absolute_error(y, pred)), 'rmse_um': float(np.sqrt(mean_squared_error(y, pred))),
+    mse = float(mean_squared_error(y, pred))
+    return {'mae_um': float(mean_absolute_error(y, pred)), 'mse_um2': mse,
+            'rmse_um': float(np.sqrt(mse)),
             'r2': float(r2_score(y, pred)) if len(y)>1 and np.ptp(y) else None,
             'log_rmse': float(np.sqrt(np.mean((np.log1p(y)-np.log1p(pred))**2))),
             'spearman': float(spearmanr(y, pred).statistic) if np.ptp(y) and np.ptp(pred) else None, 'rows': len(y)}

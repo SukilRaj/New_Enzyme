@@ -1,6 +1,6 @@
 {
-  "verified_at": 1792940692.6569068,
-  "pet_run_id": "pet-1792940691-4d2fee8a1694",
+  "verified_at": 1793252204.2448375,
+  "pet_run_id": "pet-1793252203-fbda5fbd81ff",
   "pet_status": {
     "status": "research_checkpoint_loaded",
     "image_trained": false,
@@ -25,5 +25,5 @@
     "avGFP"
   ],
   "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
-  "checkpoint_sha256": "18c37a9882bc44d443c6b1799d5a2e75390d9a2e8cb0f4d32fedc802bfb69bad"
+  "checkpoint_sha256": "6f5b1a9a038ebb18a052b59ab886c2f3876a2557af80251f2c0f819ba07784f5"
 }

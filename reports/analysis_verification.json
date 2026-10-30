@@ -1,8 +1,8 @@
 {
-  "verified_at": 1792940697.444692,
-  "legacy_run_id": "analysis-1792940696-b6b871787a09",
-  "fusion_run_id": "analysis-1792940697-395dcdb58cc2",
-  "legacy_duration_seconds": 2.62,
+  "verified_at": 1793252220.9030418,
+  "legacy_run_id": "analysis-1793252220-294b2ecd3fa1",
+  "fusion_run_id": "analysis-1793252220-5efe36ba06e5",
+  "legacy_duration_seconds": 3.31,
   "legacy_center_matches_original": true,
   "condition_scenarios": 27,
   "heatmap_cells": 49,

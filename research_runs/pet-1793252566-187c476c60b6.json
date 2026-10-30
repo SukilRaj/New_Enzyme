@@ -1,0 +1,159 @@
+{
+  "id": "pet-1793252566-187c476c60b6",
+  "created": 1793252566.6600242,
+  "domain": "PET",
+  "unit": "\u00b5M TPA",
+  "status": "completed",
+  "config": {
+    "temperature": 36,
+    "ph": 5,
+    "duration": 36,
+    "top_n": 5,
+    "objective": "activity"
+  },
+  "metrics": {
+    "mae_um": 46.78435134887695,
+    "rmse_um": 53.457618713378906,
+    "training_median_baseline_mae_um": 387.0295715332031,
+    "log_rmse": 2.2077388763427734,
+    "r2": -2.2964554238467456,
+    "test_rows": 18,
+    "test_proteins": 5
+  },
+  "result": {
+    "model": "ESM-2 Attention1D with optional image fusion",
+    "status": "research_checkpoint_not_validated_for_mutation_effects",
+    "objective": "activity",
+    "ranking_note": "Descending predicted TPA concentration.",
+    "conditions": {
+      "temperature": 36.0,
+      "ph": 5.0,
+      "duration": 36.0
+    },
+    "objectives_available": [
+      "tpa_activity"
+    ],
+    "objectives_pending": [
+      "thermostability"
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "protein_id": "37",
+        "protein_name": "PHL-7",
+        "predicted_activity_um": 3667.0189427171167,
+        "predicted_tm_c": null,
+        "image_used": false,
+        "outside_training_conditions": true,
+        "explanation": {
+          "attention_positions": [
+            212,
+            208,
+            213,
+            211,
+            117
+          ],
+          "image_ablation_delta_log1p": 0.0,
+          "note": "Attention indicates model focus, not causal residue effects. Image ablation compares the same model with its image input disabled."
+        }
+      },
+      {
+        "rank": 2,
+        "protein_id": "41",
+        "protein_name": "PET46",
+        "predicted_activity_um": 843.0048373300015,
+        "predicted_tm_c": null,
+        "image_used": false,
+        "outside_training_conditions": true,
+        "explanation": {
+          "attention_positions": [
+            205,
+            241,
+            204,
+            237,
+            242
+          ],
+          "image_ablation_delta_log1p": 0.0,
+          "note": "Attention indicates model focus, not causal residue effects. Image ablation compares the same model with its image input disabled."
+        }
+      },
+      {
+        "rank": 3,
+        "protein_id": "44",
+        "protein_name": "HiC",
+        "predicted_activity_um": 334.9882557432621,
+        "predicted_tm_c": null,
+        "image_used": false,
+        "outside_training_conditions": true,
+        "explanation": {
+          "attention_positions": [
+            193,
+            13,
+            76,
+            189,
+            1
+          ],
+          "image_ablation_delta_log1p": 0.0,
+          "note": "Attention indicates model focus, not causal residue effects. Image ablation compares the same model with its image input disabled."
+        }
+      },
+      {
+        "rank": 4,
+        "protein_id": "177",
+        "protein_name": "Sub1",
+        "predicted_activity_um": 283.19200875800664,
+        "predicted_tm_c": null,
+        "image_used": false,
+        "outside_training_conditions": true,
+        "explanation": {
+          "attention_positions": [
+            1,
+            53,
+            54,
+            70,
+            71
+          ],
+          "image_ablation_delta_log1p": 0.0,
+          "note": "Attention indicates model focus, not causal residue effects. Image ablation compares the same model with its image input disabled."
+        }
+      },
+      {
+        "rank": 5,
+        "protein_id": "25",
+        "protein_name": "TfCut2",
+        "predicted_activity_um": 154.66646350765296,
+        "predicted_tm_c": null,
+        "image_used": false,
+        "outside_training_conditions": true,
+        "explanation": {
+          "attention_positions": [
+            212,
+            213,
+            208,
+            211,
+            117
+          ],
+          "image_ablation_delta_log1p": 0.0,
+          "note": "Attention indicates model focus, not causal residue effects. Image ablation compares the same model with its image input disabled."
+        }
+      }
+    ],
+    "test_metrics": {
+      "mae_um": 46.78435134887695,
+      "rmse_um": 53.457618713378906,
+      "training_median_baseline_mae_um": 387.0295715332031,
+      "log_rmse": 2.2077388763427734,
+      "r2": -2.2964554238467456,
+      "test_rows": 18,
+      "test_proteins": 5
+    },
+    "limitations": [
+      "Exact-sequence groups; homologous sequences and papers may cross splits.",
+      "Small heterogeneous assay dataset; no causal or wet-lab validation.",
+      "Image branch requires sequence-only and shuffled-image ablations."
+    ]
+  },
+  "dataset_sha256": "fb71b760b7d408244d95065156581c4a99858fc9af1cd635149659efd75bba2c",
+  "checkpoint_sha256": "6f5b1a9a038ebb18a052b59ab886c2f3876a2557af80251f2c0f819ba07784f5",
+  "artifact_url": "/api/research/pet-runs/pet-1793252566-187c476c60b6"
+}

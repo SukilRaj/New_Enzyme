@@ -47,6 +47,7 @@ class ScientificContractTests(unittest.TestCase):
         fixed=pd.read_csv(analysis_api.MODEL/'heldout.csv')
         score=condition_model.metrics(fixed.observed_um.to_numpy(),fixed.selected_prediction_um.to_numpy())
         self.assertAlmostEqual(score['mae_um'],self.report['selected_test']['mae_um'])
+        self.assertAlmostEqual(score['mse_um2'],score['rmse_um']**2)
         for entry in self.report['fixed_test']:
             column='legacy_prediction_um' if entry['mode']=='legacy' else entry['mode']
             if column in fixed:

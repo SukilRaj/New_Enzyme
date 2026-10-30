@@ -104,14 +104,43 @@ function ProteinWorkspace({ apiBase, protein }) {
       <details><summary>Reference sequence · {protein.sequence.length} residues</summary><pre className="sequence-text">{protein.sequence}</pre></details>
       <div className="sequence-import" id="fasta-import"><label htmlFor="fasta-file">Import a protein FASTA</label><input id="fasta-file" type="file" accept=".fasta,.fa,.faa,.fas" disabled={busy} onChange={importFasta} /><p>Load your downloaded variant here. Its letters are compared with the selected reference to recover substitutions. FASTA contains a sequence, not 3D coordinates.</p></div>
       {importNote && <p className="mapping-success" role="status">{importNote}</p>}
-      <form onSubmit={submit}><label htmlFor="substitutions">Substitutions</label><input id="substitutions" value={substitutions} maxLength={500} placeholder="For example: S160A, R280A" required disabled={busy} onChange={(event) => { setSubstitutions(event.target.value); setPreview(null); setError('') }} /><button className="primary-button" disabled={busy}>{busy ? 'Validating…' : 'Preview variant'}</button></form>
+      <form onSubmit={submit}><label htmlFor="substitutions">Substitutions</label><input id="substitutions" value={substitutions} maxLength={500} placeholder="For example: S121E, D186H, R280A" required disabled={busy} onChange={(event) => { setSubstitutions(event.target.value); setPreview(null); setError('') }} />
+        {protein.protein_id === '1' && <div className="preset-row" style={{ display: 'flex', gap: '0.5rem', marginTop: '0.4rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>Presets:</span>
+          <button type="button" className="secondary-button" style={{ padding: '0.2rem 0.6rem', fontSize: '0.8rem' }} disabled={busy} onClick={async () => {
+            const subs = 'S121E, D186H, R280A'; setSubstitutions(subs); setError(''); setBusy(true)
+            try { setPreview(await request(apiBase, '/mutations/preview', { protein_id: protein.protein_id, substitutions: subs })) } catch (err) { setError(message(err)) } finally { setBusy(false) }
+          }}>FastPETase (S121E, D186H, R280A)</button>
+          <button type="button" className="secondary-button" style={{ padding: '0.2rem 0.6rem', fontSize: '0.8rem' }} disabled={busy} onClick={async () => {
+            const subs = 'W159H, S238F'; setSubstitutions(subs); setError(''); setBusy(true)
+            try { setPreview(await request(apiBase, '/mutations/preview', { protein_id: protein.protein_id, substitutions: subs })) } catch (err) { setError(message(err)) } finally { setBusy(false) }
+          }}>ThermoPETase (W159H, S238F)</button>
+        </div>}
+        <button className="primary-button" style={{ marginTop: '0.5rem' }} disabled={busy}>{busy ? 'Validating…' : 'Preview variant'}</button>
+      </form>
       {error && <p className="alert error" role="alert">{error}</p>}
       {preview && <div className="variant-result" role="status"><strong>{preview.status}</strong><p>{preview.changes.map((change) => change.notation).join(' + ')} · {preview.sequence_length} residues</p><pre className="sequence-text">{[...preview.mutant_sequence].map((letter, index) => preview.changes.some((change) => change.position === index + 1) ? <mark key={index} title={`Position ${index + 1}`}>{letter}</mark> : letter)}</pre><div className="variant-actions"><button type="button" className="primary-button" onClick={inspectVariant}>Inspect edits on reference structure</button><button type="button" className="secondary-button" onClick={download}>Download mutant FASTA</button></div><p>FASTA exports the edited sequence for reuse or a separate folding tool. The reference view uses existing coordinates; it does not predict the mutant fold. No activity or stability score is assigned to this edit.</p></div>}
     </div>
     <div className="mutation-panel"><span className="card-kicker">02 / Source evidence</span><h3>FireProtDB records</h3>
       {!evidence && !evidenceError && <p role="status">Loading evidence…</p>}
       {evidenceError && <p className="alert error" role="alert">{evidenceError} <button onClick={() => { setEvidenceError(''); setAttempt(attempt + 1) }}>Retry evidence</button></p>}
-      {evidence && <><p>{evidence.note}</p>{!evidence.records.length && <p className="state-block">{evidence.status === 'unavailable' ? 'Evidence extract unavailable.' : 'No matching records in the local extract. This does not establish that no published evidence exists.'}</p>}
+      {evidence && <><p>{evidence.note}</p>
+        {!evidence.records.length && <div className="state-block">
+          <p>{evidence.status === 'unavailable' ? 'Evidence extract unavailable.' : 'No matching records in the local FireProtDB extract for this protein. (Experimental FireProtDB records are available for Protein 42: CalB).'}</p>
+          {protein.protein_id === '1' && <div style={{ marginTop: '0.75rem' }}>
+            <p style={{ fontSize: '0.85rem', marginBottom: '0.4rem', fontWeight: 600 }}>Quick literature mutations for IsPETase:</p>
+            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+              <button type="button" className="secondary-button" disabled={busy} onClick={async () => {
+                const subs = 'S121E, D186H, R280A'; setSubstitutions(subs); setError(''); setBusy(true)
+                try { setPreview(await request(apiBase, '/mutations/preview', { protein_id: protein.protein_id, substitutions: subs })) } catch (err) { setError(message(err)) } finally { setBusy(false) }
+              }}>Load FastPETase (S121E, D186H, R280A)</button>
+              <button type="button" className="secondary-button" disabled={busy} onClick={async () => {
+                const subs = 'W159H, S238F'; setSubstitutions(subs); setError(''); setBusy(true)
+                try { setPreview(await request(apiBase, '/mutations/preview', { protein_id: protein.protein_id, substitutions: subs })) } catch (err) { setError(message(err)) } finally { setBusy(false) }
+              }}>Load ThermoPETase (W159H, S238F)</button>
+            </div>
+          </div>}
+        </div>}
         <div className="mutation-evidence-list">{evidence.records.map((record, index) => <details key={`${record.experiment_id}-${index}`}><summary>{record.substitutions || 'Reference measurement'} <span>Experiment {record.experiment_id}</span></summary>
           <p>{record.residue_check_note} Exact source sequence identity remains unresolved.</p>
           <dl className="evidence-fields"><dt>Accession</dt><dd>{record.uniprot_accession}</dd><dt>Source sequence length</dt><dd>{record.reported_sequence_length || 'Unavailable'}</dd><dt>Method / measure</dt><dd>{record.method || 'Unavailable'} / {record.measure || 'Unavailable'}</dd><dt>Buffer</dt><dd>{record.buffer || 'Unavailable'} {record.buffer_concentration}</dd>{Object.entries(record.measurements).map(([key, value]) => <div key={key}><dt>{key} (raw)</dt><dd>{value}</dd></div>)}</dl>

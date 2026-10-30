@@ -33,5 +33,33 @@
     "original_path": "D:/Enzyme_ML_new/runs/20261024-092703-afed29/decoder.pt",
     "evaluation": "Original 20-sequence execution demonstration",
     "bytes": 300792
+  },
+  {
+    "model": "Assay historical split model",
+    "bundled_path": "models/assay_v2/train-20261024-160717/historical_model.pkl",
+    "original_path": "D:/Enzyme_ML_new/models/assay_v2/train-20261024-160717/historical_model.pkl",
+    "evaluation": "Historical training-only fit; evaluate with historical_predictions.csv",
+    "bytes": 49767
+  },
+  {
+    "model": "GFP three-head ESM checkpoint",
+    "bundled_path": "runs/20261024-093528-uncertainty-diversity/decoder.pt",
+    "original_path": "D:/Enzyme_ML_new/runs/20261024-093528-uncertainty-diversity/decoder.pt",
+    "evaluation": "Original saved execution-study split; full engine code in notebook 03",
+    "bytes": 901692
+  },
+  {
+    "model": "Frozen ESM-2 8M encoder / masked LM",
+    "bundled_path": "models/esm2_8m/model.safetensors",
+    "original_path": "D:/Enzyme_ML_new/models/huggingface/hub/models--facebook--esm2_t6_8M_UR50D/snapshots/c731040fcd8d73dceaa04b0a8e6329b345b0f5df/model.safetensors",
+    "evaluation": "Pretrained weights; GFP task predictions require a fitted head",
+    "bytes": 31384292
+  },
+  {
+    "model": "Frozen ESM-2 35M encoder / masked LM",
+    "bundled_path": "models/esm2_35m/model.safetensors",
+    "original_path": "D:/Enzyme_ML_new/models/huggingface/hub/models--facebook--esm2_t12_35M_UR50D/snapshots/6fbf070e65b0b7291e7bbcd451118c216cff79d8/model.safetensors",
+    "evaluation": "Pretrained weights used for PET features; not a fitted PET activity predictor",
+    "bytes": 136008798
   }
 ]

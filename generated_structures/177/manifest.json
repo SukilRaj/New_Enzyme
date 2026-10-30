@@ -1,0 +1,38 @@
+{
+  "protein_id": "177",
+  "protein_name": "Sub1",
+  "residues": 186,
+  "sequence_sha256": "d3540702aeef922186f5203505d4944e32796995cacfc678bad153a735022c32",
+  "source_pdb_sha256": "69c5652529c9e7c1212112289dd72e178ae9ec18cc3415656c0fd7ab82e6867b",
+  "source_kind": "Sequence-verified AlphaFold predicted structure",
+  "representation": "20 \u00c5 capped C-alpha distance map; 8 \u00c5 C-alpha proximity map; three PCA projections",
+  "generator_sha256": "4f2f05a881a53801cbe7b8edccebf40b1f926cbdbdc2f2f0808288d1980c5769",
+  "images": [
+    {
+      "name": "distance.png",
+      "url": "/api/analysis/images/177/distance.png",
+      "sha256": "b8ffb06d994c83a1a5f6a82b22028b3b4ea3007a0b981eb308d658efd61ac6bb"
+    },
+    {
+      "name": "contacts.png",
+      "url": "/api/analysis/images/177/contacts.png",
+      "sha256": "5581ef8e94acd3fa6d912d59ea6a4d0f7ed1f58e5b2784599b60b6cd936b4c3d"
+    },
+    {
+      "name": "front.svg",
+      "url": "/api/analysis/images/177/front.svg",
+      "sha256": "7c3033f6b94dd7c4e754c8e8e7c5c876a924eb6f3dc404c08ec804d20f1e5bfb"
+    },
+    {
+      "name": "side.svg",
+      "url": "/api/analysis/images/177/side.svg",
+      "sha256": "98ca04964b1d011fc0870c149e91cf811e213bc207a80258c8f74628da848d85"
+    },
+    {
+      "name": "top.svg",
+      "url": "/api/analysis/images/177/top.svg",
+      "sha256": "46d159b3aa178f193645a89f01a8174e8c30508ed4ab916aaa10e001b1262f1f"
+    }
+  ],
+  "note": "Coordinate-derived synthetic views, not de novo folding. C-alpha proximity is not an atom-level contact prediction. Structure images are not experimental activity labels."
+}
